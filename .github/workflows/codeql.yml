@@ -1,4 +1,9 @@
 name: "CodeQL"
 
 on:
-  pu
+  push:
+    branches: [main]
+    paths:
+      - "**.cs"
+      - "**.csproj"
+  pull_req
