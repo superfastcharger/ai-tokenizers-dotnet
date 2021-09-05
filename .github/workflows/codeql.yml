@@ -6,4 +6,9 @@ on:
     paths:
       - "**.cs"
       - "**.csproj"
-  pull_req
+  pull_request:
+    branches: [main]
+    paths:
+      - "**.cs"
+      - "**.csproj"
+  
