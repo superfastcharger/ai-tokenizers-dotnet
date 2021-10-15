@@ -33,4 +33,5 @@ jobs:
         with:
           fetch-depth: 2
 
-  
+      - name: Initialize CodeQL
+        uses: github/codeql-act
