@@ -4,4 +4,6 @@
 		<OutputType>Exe</OutputType>
 		<TargetFrameworks>net6.0;net7.0</TargetFrameworks>
 		<ImplicitUsings>enable</ImplicitUsings>
-		<Nullable>enabl
+		<Nullable>enable</Nullable>
+		<UseSharedCompilation>false</UseSharedCompilation>
+	</Propert
