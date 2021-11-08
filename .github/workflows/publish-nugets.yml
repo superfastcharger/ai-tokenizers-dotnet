@@ -44,3 +44,7 @@ jobs:
       - name: Pack OpenAi Tokenizer
         if: env.PREFIX == 'v' || env.PREFIX == 'v-openai'
         run: dotnet pack LLMSharp.OpenAi.Tokenizer --configuration Release --output . -p:Version=${VERSION}
+      - name: Push
+        run: dotnet nuget push LLMSharp.*.Tokenizer.${VERSION}.nupkg --source 'https://api.nuget.org/v3/index.json' --api-key ${NUGET_API_KEY}
+        env:
+          NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
