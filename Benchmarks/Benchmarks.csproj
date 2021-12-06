@@ -13,4 +13,4 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectRef
+		<ProjectReference Include="..\LLMSharp.Anthropic.Tokenizer\LLMSharp.Anthropic.Toke
