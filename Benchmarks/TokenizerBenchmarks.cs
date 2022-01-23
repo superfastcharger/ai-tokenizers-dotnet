@@ -4,4 +4,7 @@ using BenchmarkDotNet.Jobs;
 using LLMSharp.Anthropic.Tokenizer;
 using LLMSharp.OpenAi.Tokenizer;
 
-namespace Bench
+namespace Benchmarks
+{
+    [SimpleJob(RuntimeMoniker.Net70, baseline:true)]
+    [SimpleJob(RuntimeM
