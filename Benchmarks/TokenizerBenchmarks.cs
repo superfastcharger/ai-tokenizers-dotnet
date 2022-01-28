@@ -8,4 +8,7 @@ namespace Benchmarks
 {
     [SimpleJob(RuntimeMoniker.Net70, baseline:true)]
     [SimpleJob(RuntimeMoniker.Net60)]
-    [GroupBenchmarksBy(BenchmarkLogicalGroupRule.ByCategory)
+    [GroupBenchmarksBy(BenchmarkLogicalGroupRule.ByCategory)]
+    [CategoriesColumn]
+    [MemoryDiagnoser]
+    [HideColumns("
