@@ -7,4 +7,5 @@ using LLMSharp.OpenAi.Tokenizer;
 namespace Benchmarks
 {
     [SimpleJob(RuntimeMoniker.Net70, baseline:true)]
-    [SimpleJob(RuntimeM
+    [SimpleJob(RuntimeMoniker.Net60)]
+    [GroupBenchmarksBy(BenchmarkLogicalGroupRule.ByCategory)
