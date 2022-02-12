@@ -11,4 +11,7 @@ namespace Benchmarks
     [GroupBenchmarksBy(BenchmarkLogicalGroupRule.ByCategory)]
     [CategoriesColumn]
     [MemoryDiagnoser]
-    [HideColumns("
+    [HideColumns("Error", "StdDev", "StdDev", "RatioSD")]
+    public class TokenizerBenchmarks
+    {
+ 
