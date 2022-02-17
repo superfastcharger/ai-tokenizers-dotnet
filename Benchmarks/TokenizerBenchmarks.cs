@@ -14,4 +14,7 @@ namespace Benchmarks
     [HideColumns("Error", "StdDev", "StdDev", "RatioSD")]
     public class TokenizerBenchmarks
     {
-        private OpenAiChatCompletionsTokenizer? openAiChatCompletionsToken
+        private OpenAiChatCompletionsTokenizer? openAiChatCompletionsTokenizer;
+        private ClaudeTokenizer? claudeTokenizer;
+
+        [Params(Con
