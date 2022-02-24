@@ -17,4 +17,5 @@ namespace Benchmarks
         private OpenAiChatCompletionsTokenizer? openAiChatCompletionsTokenizer;
         private ClaudeTokenizer? claudeTokenizer;
 
-        [Params(Con
+        [Params(Constants.OpenAiPluginsDocumentation)]
+        public string StringToEnc
