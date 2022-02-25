@@ -18,4 +18,9 @@ namespace Benchmarks
         private ClaudeTokenizer? claudeTokenizer;
 
         [Params(Constants.OpenAiPluginsDocumentation)]
-        public string StringToEnc
+        public string StringToEncode = string.Empty;
+
+        [GlobalSetup]
+        public void Setup()
+        {
+    
