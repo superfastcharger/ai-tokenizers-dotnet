@@ -23,4 +23,5 @@ namespace Benchmarks
         [GlobalSetup]
         public void Setup()
         {
-            openAiChatCompletionsTokenizer = new OpenAiChatComplet
+            openAiChatCompletionsTokenizer = new OpenAiChatCompletionsTokenizer();
+            claudeTokenizer = new ClaudeT
