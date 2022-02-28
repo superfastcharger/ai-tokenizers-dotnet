@@ -24,4 +24,8 @@ namespace Benchmarks
         public void Setup()
         {
             openAiChatCompletionsTokenizer = new OpenAiChatCompletionsTokenizer();
-            claudeTokenizer = new ClaudeT
+            claudeTokenizer = new ClaudeTokenizer();
+        }
+
+        [Benchmark]
+        public IRe
