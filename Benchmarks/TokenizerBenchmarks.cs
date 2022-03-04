@@ -28,4 +28,4 @@ namespace Benchmarks
         }
 
         [Benchmark]
-        public IRe
+        public IReadOnlyList<int> OpenAiChatCompletionsTokenizerEncode() => openAiChatC
