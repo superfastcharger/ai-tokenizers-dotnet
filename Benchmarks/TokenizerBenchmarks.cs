@@ -28,4 +28,6 @@ namespace Benchmarks
         }
 
         [Benchmark]
-        public IReadOnlyList<int> OpenAiChatCompletionsTokenizerEncode() => openAiChatC
+        public IReadOnlyList<int> OpenAiChatCompletionsTokenizerEncode() => openAiChatCompletionsTokenizer!.Encode(StringToEncode);
+
+        [Benchm
