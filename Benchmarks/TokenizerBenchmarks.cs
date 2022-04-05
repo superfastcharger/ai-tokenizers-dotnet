@@ -37,4 +37,6 @@ namespace Benchmarks
         public IReadOnlyList<int> ClaudeTokenizerEncode() => claudeTokenizer!.Encode(StringToEncode);
 
         [Benchmark]
-        public int ClaudeTokenizerCountTokens() => 
+        public int ClaudeTokenizerCountTokens() => claudeTokenizer!.CountTokens(StringToEncode);
+    }
+}
