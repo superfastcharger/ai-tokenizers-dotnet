@@ -34,4 +34,4 @@ namespace Benchmarks
         public int OpenAiChatCompletionsTokenizerCountTokens() => openAiChatCompletionsTokenizer!.CountTokens(StringToEncode);
 
         [Benchmark]
-        public IReadOnlyList<int
+        public IReadOnlyList<int> ClaudeTokenizerEncode() => claudeTokenizer!.Encode(StringT
