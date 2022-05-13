@@ -5,4 +5,4 @@ VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LLMSharp.Tokenizers.Shared", "LLMSharp.Tokenizers.Shared\LLMSharp.Tokenizers.Shared.csproj", "{A98913ED-C160-4107-BE21-ECF1A083D6B0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LLMSharp.Anthropic.Tokenizer", "LLMSharp
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LLMSharp.Anthropic.Tokenizer", "LLMSharp.Anthropic.Tokenizer\LLMSharp.Anthropic.Tokenizer.csproj", "{5C9B5627-C504
