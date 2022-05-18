@@ -9,4 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LLMSharp.Anthropic.Tokenize
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{ADCACC22-4CB1-402E-B157-15B4906A892E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LLMSharp.TokenizerMap.Builder", "LLMSharp.TokenizerMap.Builder\LLMSharp.TokenizerMap.Builder.csproj", "{9164E7DE-FEDB-4888-8DCB-618
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LLMSharp.TokenizerMap.Builder", "LLMSharp.TokenizerMap.Builder\LLMSharp.TokenizerMap.Builder.csproj", "{9164E7DE-FEDB-4888-8DCB-6186E2FCE5EF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}")
