@@ -14,4 +14,5 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LLMSharp.OpenAi.Tokenizer", "LLMSharp.OpenAi.Tokenizer\LLMSharp.OpenAi.Tokenizer.csproj", "{784C874F-9860-4503-95D7-5947EF5C7042}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LLMSharp.Tokenizers.Tests", "LLMSharp.Tokenizers.Tests\LLMSharp.Tokenizers.Tests.csproj", "{0AAB5691-7196-448C-A56A-C282B23E43B0}"
-En
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Benchmarks", "Benchmark
