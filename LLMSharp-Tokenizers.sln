@@ -17,4 +17,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LLMSharp.Tokenizers.Tests",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Benchmarks", "Benchmarks\Benchmarks.csproj", "{3D1913BA-6527-4CBD-BB56-BB1CA25C9792}"
 EndProject
-G
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+	
