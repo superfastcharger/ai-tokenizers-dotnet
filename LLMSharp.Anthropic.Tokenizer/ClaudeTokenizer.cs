@@ -7,4 +7,6 @@ using System.Text.RegularExpressions;
 namespace LLMSharp.Anthropic.Tokenizer
 {
     /// <summary>
-    /// Unofficial implementation of Anth
+    /// Unofficial implementation of Anthropic Claude Tokenizer in dotnet    
+    /// </summary>
+    public 
