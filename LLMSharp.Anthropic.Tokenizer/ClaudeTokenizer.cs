@@ -9,4 +9,6 @@ namespace LLMSharp.Anthropic.Tokenizer
     /// <summary>
     /// Unofficial implementation of Anthropic Claude Tokenizer in dotnet    
     /// </summary>
-    public 
+    public class ClaudeTokenizer: ILLMSharpTokenizer
+    {
+        private readonly Ti
