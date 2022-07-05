@@ -2,4 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Reflection;
-usin
+using System.Text.RegularExpressions;
+
+namespace LLMSharp.Anthropic.
