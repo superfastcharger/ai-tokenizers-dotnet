@@ -11,4 +11,7 @@ namespace LLMSharp.Anthropic.Tokenizer
     /// </summary>
     public class ClaudeTokenizer: ILLMSharpTokenizer
     {
-        private readonly Ti
+        private readonly TikTokenizer tokenizer;
+
+        /// <summary>
+        /// Creates an ins
