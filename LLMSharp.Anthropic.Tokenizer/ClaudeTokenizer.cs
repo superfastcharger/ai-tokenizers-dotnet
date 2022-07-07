@@ -14,4 +14,5 @@ namespace LLMSharp.Anthropic.Tokenizer
         private readonly TikTokenizer tokenizer;
 
         /// <summary>
-        /// Creates an ins
+        /// Creates an instance of Claude Tokenizer
+        /// Reads the binary serialized b
