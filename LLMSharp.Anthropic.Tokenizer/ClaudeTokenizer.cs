@@ -16,4 +16,5 @@ namespace LLMSharp.Anthropic.Tokenizer
         /// <summary>
         /// Creates an instance of Claude Tokenizer
         /// Reads the binary serialized bpe rank maps and regex pattern string
-        /// Uses rankma
+        /// Uses rankmaps and pattern string to create an instance of tiktokenizer
+        //
