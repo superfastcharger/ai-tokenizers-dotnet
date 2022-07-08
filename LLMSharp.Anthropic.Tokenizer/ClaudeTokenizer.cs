@@ -15,4 +15,5 @@ namespace LLMSharp.Anthropic.Tokenizer
 
         /// <summary>
         /// Creates an instance of Claude Tokenizer
-        /// Reads the binary serialized b
+        /// Reads the binary serialized bpe rank maps and regex pattern string
+        /// Uses rankma
