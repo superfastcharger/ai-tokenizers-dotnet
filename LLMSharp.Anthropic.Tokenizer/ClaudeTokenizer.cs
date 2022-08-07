@@ -21,4 +21,6 @@ namespace LLMSharp.Anthropic.Tokenizer
         public ClaudeTokenizer() 
         {
             var assembly = Assembly.GetExecutingAssembly();
-            using (var stream = assembly.GetManifestResourceStream("LLMSharp.Anthropic.Tokenize
+            using (var stream = assembly.GetManifestResourceStream("LLMSharp.Anthropic.Tokenizer.claude-token-maps.bin"))
+            {
+                var tokenMaps = Toke
