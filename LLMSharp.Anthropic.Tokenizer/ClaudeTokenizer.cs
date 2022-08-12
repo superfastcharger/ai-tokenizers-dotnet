@@ -24,4 +24,4 @@ namespace LLMSharp.Anthropic.Tokenizer
             using (var stream = assembly.GetManifestResourceStream("LLMSharp.Anthropic.Tokenizer.claude-token-maps.bin"))
             {
                 var tokenMaps = TokenizerMaps.Parser.ParseFrom(stream);
-                var regexes
+                var regexes = new Regex(tokenMaps.RegexPattern, RegexOptions.Compiled | 
