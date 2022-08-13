@@ -26,4 +26,8 @@ namespace LLMSharp.Anthropic.Tokenizer
                 var tokenMaps = TokenizerMaps.Parser.ParseFrom(stream);
                 var regexes = new Regex(tokenMaps.RegexPattern, RegexOptions.Compiled | RegexOptions.ECMAScript | RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
 
-                tokenizer = new TikTokenizer(tokenMaps, rege
+                tokenizer = new TikTokenizer(tokenMaps, regexes);
+            }                
+        }
+
+        /// <summary>
