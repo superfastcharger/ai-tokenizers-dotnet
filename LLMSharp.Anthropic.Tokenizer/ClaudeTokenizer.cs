@@ -32,4 +32,5 @@ namespace LLMSharp.Anthropic.Tokenizer
 
         /// <summary>
         /// Encodes a string into tokens
-        /// Special tokens are artif
+        /// Special tokens are artificial tokens used to unlock capabilities from a model,
+       
