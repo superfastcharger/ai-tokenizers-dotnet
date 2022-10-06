@@ -38,4 +38,5 @@ namespace LLMSharp.Anthropic.Tokenizer
         /// This method uses the default implementation and throws an error if the text contains any valid special tokens.
         /// For more granular control of encoding special tokens use 'EncodeWithSpecialTokens'
         /// </summary>
-        /// <param name="tex
+        /// <param name="text">text to encode using claude tokenizer</param>
+        /// <returns>enc
