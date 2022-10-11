@@ -39,4 +39,5 @@ namespace LLMSharp.Anthropic.Tokenizer
         /// For more granular control of encoding special tokens use 'EncodeWithSpecialTokens'
         /// </summary>
         /// <param name="text">text to encode using claude tokenizer</param>
-        /// <returns>enc
+        /// <returns>encoded tokens list of input text</returns>
+        public IReadOnlyList<int> Encode(strin
