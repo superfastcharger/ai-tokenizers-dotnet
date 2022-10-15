@@ -40,4 +40,6 @@ namespace LLMSharp.Anthropic.Tokenizer
         /// </summary>
         /// <param name="text">text to encode using claude tokenizer</param>
         /// <returns>encoded tokens list of input text</returns>
-        public IReadOnlyList<int> Encode(strin
+        public IReadOnlyList<int> Encode(string text)
+        {
+            return this.tokenizer.Encode(text, new HashSet<stri
