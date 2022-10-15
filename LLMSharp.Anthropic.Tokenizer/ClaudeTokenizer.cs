@@ -42,4 +42,8 @@ namespace LLMSharp.Anthropic.Tokenizer
         /// <returns>encoded tokens list of input text</returns>
         public IReadOnlyList<int> Encode(string text)
         {
-            return this.tokenizer.Encode(text, new HashSet<stri
+            return this.tokenizer.Encode(text, new HashSet<string>(), null);
+        }
+
+        /// <summary>
+        /// Coun
