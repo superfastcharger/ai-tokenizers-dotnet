@@ -46,4 +46,5 @@ namespace LLMSharp.Anthropic.Tokenizer
         }
 
         /// <summary>
-        /// Coun
+        /// Counts number of byte pair encoded tokens for the given text input
+       
