@@ -53,4 +53,5 @@ namespace LLMSharp.Anthropic.Tokenizer
         /// This method uses the default implementation and throws an error if the text contains any valid special tokens.
         /// For more granular control of encoding special tokens use 'EncodeWithSpecialTokens'
         /// </summary>
-        /// <param name="text">text input for counting
+        /// <param name="text">text input for counting tokens using claude tokenizer</param>
+        /// <returns>number of token
