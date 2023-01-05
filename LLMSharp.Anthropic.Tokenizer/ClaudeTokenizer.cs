@@ -62,4 +62,4 @@ namespace LLMSharp.Anthropic.Tokenizer
 
         /// <summary>
         /// Encodes a string into tokens using claude bpe ranks
-      
+        /// Special tokens are artificial tokens used to unlock capabili
