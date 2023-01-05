@@ -60,4 +60,6 @@ namespace LLMSharp.Anthropic.Tokenizer
             return this.tokenizer.CountTokens(text, new HashSet<string>(), null);
         }
 
- 
+        /// <summary>
+        /// Encodes a string into tokens using claude bpe ranks
+      
