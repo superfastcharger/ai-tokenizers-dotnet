@@ -54,4 +54,5 @@ namespace LLMSharp.Anthropic.Tokenizer
         /// For more granular control of encoding special tokens use 'EncodeWithSpecialTokens'
         /// </summary>
         /// <param name="text">text input for counting tokens using claude tokenizer</param>
-        /// <returns>number of token
+        /// <returns>number of tokens in the given text</returns>
+        public int CountTokens(string 
