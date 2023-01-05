@@ -55,4 +55,6 @@ namespace LLMSharp.Anthropic.Tokenizer
         /// </summary>
         /// <param name="text">text input for counting tokens using claude tokenizer</param>
         /// <returns>number of tokens in the given text</returns>
-        public int CountTokens(string 
+        public int CountTokens(string text)
+        {
+            return this.tokenizer.CountTok
