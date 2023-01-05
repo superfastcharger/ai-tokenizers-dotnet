@@ -57,4 +57,7 @@ namespace LLMSharp.Anthropic.Tokenizer
         /// <returns>number of tokens in the given text</returns>
         public int CountTokens(string text)
         {
-            return this.tokenizer.CountTok
+            return this.tokenizer.CountTokens(text, new HashSet<string>(), null);
+        }
+
+ 
