@@ -70,4 +70,4 @@ namespace LLMSharp.Anthropic.Tokenizer
         /// 3. allowedSpecialTokens and disallowedSpecialTokens should contain only valid supported tokens by the model
         /// </summary>
         /// <param name="text">text to encode using claude tokenizer</param>
-        /// <param name="allowedSpecialTokens">special tokens that are allowed for tokenization. If null, all the special tokens supp
+        /// <param name="allowedSpecialTokens">special tokens that are allowed for tokenization. If null, all the special tokens supported by the model are allowed. If empty, none of the special tokens a
