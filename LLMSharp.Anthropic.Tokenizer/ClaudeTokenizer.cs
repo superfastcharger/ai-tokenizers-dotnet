@@ -75,4 +75,6 @@ namespace LLMSharp.Anthropic.Tokenizer
         /// <returns>encoded tokens list of input text</returns>
         public IReadOnlyList<int> EncodeWithSpecialTokens(string text, IEnumerable<string> allowedSpecialTokens, IEnumerable<string> disallowedSpecialTokens)
         {            
-            return this.tokenizer.
+            return this.tokenizer.Encode(
+                text,
+                (allowedSpecialToken
