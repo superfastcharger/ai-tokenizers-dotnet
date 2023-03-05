@@ -77,4 +77,5 @@ namespace LLMSharp.Anthropic.Tokenizer
         {            
             return this.tokenizer.Encode(
                 text,
-                (allowedSpecialToken
+                (allowedSpecialTokens == null) ? null : new HashSet<string>(allowedSpecialTokens),
+     
