@@ -78,4 +78,4 @@ namespace LLMSharp.Anthropic.Tokenizer
             return this.tokenizer.Encode(
                 text,
                 (allowedSpecialTokens == null) ? null : new HashSet<string>(allowedSpecialTokens),
-     
+                (disallowedSpecialTokens == null) ? null : new HashSe
