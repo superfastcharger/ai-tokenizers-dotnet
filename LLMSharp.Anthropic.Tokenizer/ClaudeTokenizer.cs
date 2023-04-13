@@ -95,4 +95,4 @@ namespace LLMSharp.Anthropic.Tokenizer
         /// <param name="disallowedSpecialTokens">special tokens that should be disallowed for tokenization. If null, any special token that is not allowed will be considered disallowed.</param>
         /// <returns>number of tokens for the given text</returns>
         /// <exception cref="InvalidOperationException">thrown when any of the disallowed special tokens are found in the text</exception>
-        public int CountWithSpecialTokens(string text, IEnumerable<
+        public int CountWithSpecialTokens(string text, IEnumerable<string> allowedSpecialTokens, IEnumerable<string> disallowedSpecia
