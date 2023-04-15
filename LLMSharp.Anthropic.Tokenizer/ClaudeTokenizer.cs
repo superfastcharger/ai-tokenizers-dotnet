@@ -97,4 +97,6 @@ namespace LLMSharp.Anthropic.Tokenizer
         /// <exception cref="InvalidOperationException">thrown when any of the disallowed special tokens are found in the text</exception>
         public int CountWithSpecialTokens(string text, IEnumerable<string> allowedSpecialTokens, IEnumerable<string> disallowedSpecialTokens)
         {
-            return this.tokenizer.Coun
+            return this.tokenizer.CountTokens(
+                text,
+                (allowedSpecialTokens == null) ? nul
