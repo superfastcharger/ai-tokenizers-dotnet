@@ -99,4 +99,5 @@ namespace LLMSharp.Anthropic.Tokenizer
         {
             return this.tokenizer.CountTokens(
                 text,
-                (allowedSpecialTokens == null) ? nul
+                (allowedSpecialTokens == null) ? null : new HashSet<string>(allowedSpecialTokens),
+                (disallowedSpec
