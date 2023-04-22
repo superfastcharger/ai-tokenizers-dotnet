@@ -100,4 +100,8 @@ namespace LLMSharp.Anthropic.Tokenizer
             return this.tokenizer.CountTokens(
                 text,
                 (allowedSpecialTokens == null) ? null : new HashSet<string>(allowedSpecialTokens),
-                (disallowedSpecialTokens == null) ? null : new HashSet<string>(disallowedSpecialT
+                (disallowedSpecialTokens == null) ? null : new HashSet<string>(disallowedSpecialTokens));
+        }
+
+        /// <summary>
+        /// Decodes a list of tok
