@@ -105,4 +105,6 @@ namespace LLMSharp.Anthropic.Tokenizer
 
         /// <summary>
         /// Decodes a list of tokens into a string using claude bpe ranks
-        /// Useful for visualizing t
+        /// Useful for visualizing tokenization
+        /// </summary>
+        /// <param name="tokens">list of
