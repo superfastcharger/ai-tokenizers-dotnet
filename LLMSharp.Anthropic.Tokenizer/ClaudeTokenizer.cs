@@ -108,4 +108,7 @@ namespace LLMSharp.Anthropic.Tokenizer
         /// Useful for visualizing tokenization
         /// </summary>
         /// <param name="tokens">list of tokens to decode</param>
-        /// <returns>decoded string using the tokens</
+        /// <returns>decoded string using the tokens</returns>
+        public string Decode(IEnumerable<int> tokens)
+        {
+    
