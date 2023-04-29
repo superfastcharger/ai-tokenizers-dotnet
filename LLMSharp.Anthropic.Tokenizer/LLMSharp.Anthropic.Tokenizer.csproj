@@ -1,0 +1,10 @@
+
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<PackageId>LLMSharp.Anthropic.Tokenizer</PackageId>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+		<AnalysisLevel>latest-recommended</AnalysisLevel>
+		<Authors>Veerash Ayyagari</Authors>
+		<Company>veerash-ayyagari</Company>

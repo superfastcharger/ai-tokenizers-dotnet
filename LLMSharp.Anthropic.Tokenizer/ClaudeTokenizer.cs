@@ -111,4 +111,7 @@ namespace LLMSharp.Anthropic.Tokenizer
         /// <returns>decoded string using the tokens</returns>
         public string Decode(IEnumerable<int> tokens)
         {
-    
+            return this.tokenizer.Decode(tokens);
+        }
+    }
+}
