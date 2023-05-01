@@ -7,3 +7,4 @@ using System.Text.RegularExpressions;
 namespace LLMSharp.OpenAi.Tokenizer
 {
     /// <summary>
+    /// TikTokenizer implementation for OpenAi GPT 
