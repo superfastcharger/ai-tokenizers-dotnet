@@ -13,4 +13,5 @@ namespace LLMSharp.OpenAi.Tokenizer
     {
         private readonly TikTokenizer tokenizer;
 
-        //
+        /// <summary>
+        /// Creates an instance of OpenAi chat completions Tok
