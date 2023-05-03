@@ -14,4 +14,5 @@ namespace LLMSharp.OpenAi.Tokenizer
         private readonly TikTokenizer tokenizer;
 
         /// <summary>
-        /// Creates an instance of OpenAi chat completions Tok
+        /// Creates an instance of OpenAi chat completions Tokenizer
+        /// Reads the binary serialized bpe rank maps and regex pat
