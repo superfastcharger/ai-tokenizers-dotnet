@@ -10,4 +10,7 @@ namespace LLMSharp.OpenAi.Tokenizer
     /// TikTokenizer implementation for OpenAi GPT ChatCompletion models (GPT 3.5/GPT 4)
     /// </summary>
     public class OpenAiChatCompletionsTokenizer: ILLMSharpTokenizer
-  
+    {
+        private readonly TikTokenizer tokenizer;
+
+        //
