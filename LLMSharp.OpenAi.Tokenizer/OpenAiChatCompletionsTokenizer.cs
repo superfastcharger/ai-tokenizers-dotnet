@@ -15,4 +15,5 @@ namespace LLMSharp.OpenAi.Tokenizer
 
         /// <summary>
         /// Creates an instance of OpenAi chat completions Tokenizer
-        /// Reads the binary serialized bpe rank maps and regex pat
+        /// Reads the binary serialized bpe rank maps and regex pattern string
+        /// Uses rankmaps and pattern string to create
