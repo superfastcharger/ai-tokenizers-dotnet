@@ -18,4 +18,6 @@ namespace LLMSharp.OpenAi.Tokenizer
         /// Reads the binary serialized bpe rank maps and regex pattern string
         /// Uses rankmaps and pattern string to create an instance of tiktokenizer
         /// </summary>
-        public OpenAiChatComplet
+        public OpenAiChatCompletionsTokenizer()
+        {
+            var assembly = Assembly.GetExecutingAs
