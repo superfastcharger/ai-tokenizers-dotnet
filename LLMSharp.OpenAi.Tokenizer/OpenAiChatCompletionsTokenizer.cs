@@ -20,4 +20,5 @@ namespace LLMSharp.OpenAi.Tokenizer
         /// </summary>
         public OpenAiChatCompletionsTokenizer()
         {
-            var assembly = Assembly.GetExecutingAs
+            var assembly = Assembly.GetExecutingAssembly();
+            using (var stream = assembly.GetManifestRes
