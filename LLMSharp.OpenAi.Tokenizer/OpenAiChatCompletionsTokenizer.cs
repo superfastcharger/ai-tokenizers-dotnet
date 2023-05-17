@@ -21,4 +21,6 @@ namespace LLMSharp.OpenAi.Tokenizer
         public OpenAiChatCompletionsTokenizer()
         {
             var assembly = Assembly.GetExecutingAssembly();
-            using (var stream = assembly.GetManifestResourceStream("LLMSharp.OpenAi.Tokenizer.gpt-chatcompletions-token-
+            using (var stream = assembly.GetManifestResourceStream("LLMSharp.OpenAi.Tokenizer.gpt-chatcompletions-token-maps.bin"))
+            {
+                var tokenMaps = TokenizerM
