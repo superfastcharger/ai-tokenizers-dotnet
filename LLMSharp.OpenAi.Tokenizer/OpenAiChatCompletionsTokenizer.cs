@@ -23,4 +23,5 @@ namespace LLMSharp.OpenAi.Tokenizer
             var assembly = Assembly.GetExecutingAssembly();
             using (var stream = assembly.GetManifestResourceStream("LLMSharp.OpenAi.Tokenizer.gpt-chatcompletions-token-maps.bin"))
             {
-                var tokenMaps = TokenizerM
+                var tokenMaps = TokenizerMaps.Parser.ParseFrom(stream);
+                var regexes = new Regex
