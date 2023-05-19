@@ -24,4 +24,6 @@ namespace LLMSharp.OpenAi.Tokenizer
             using (var stream = assembly.GetManifestResourceStream("LLMSharp.OpenAi.Tokenizer.gpt-chatcompletions-token-maps.bin"))
             {
                 var tokenMaps = TokenizerMaps.Parser.ParseFrom(stream);
-                var regexes = new Regex(tokenMaps.RegexPattern, RegexOptions.Compiled | RegexOptions.ECMAScript | RegexOptions.IgnoreCase | RegexOptions.CultureInvariant
+                var regexes = new Regex(tokenMaps.RegexPattern, RegexOptions.Compiled | RegexOptions.ECMAScript | RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+
+                tokenizer = new TikTokenizer(tokenMaps, regexes
