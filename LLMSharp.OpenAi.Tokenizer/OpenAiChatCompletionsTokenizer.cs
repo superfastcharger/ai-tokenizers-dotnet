@@ -26,4 +26,9 @@ namespace LLMSharp.OpenAi.Tokenizer
                 var tokenMaps = TokenizerMaps.Parser.ParseFrom(stream);
                 var regexes = new Regex(tokenMaps.RegexPattern, RegexOptions.Compiled | RegexOptions.ECMAScript | RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
 
-                tokenizer = new TikTokenizer(tokenMaps, regexes
+                tokenizer = new TikTokenizer(tokenMaps, regexes);
+            }
+        }
+
+        /// <summary>
+        /// Encode
