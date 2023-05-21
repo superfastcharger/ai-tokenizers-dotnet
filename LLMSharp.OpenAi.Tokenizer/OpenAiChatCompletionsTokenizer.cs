@@ -31,4 +31,5 @@ namespace LLMSharp.OpenAi.Tokenizer
         }
 
         /// <summary>
-        /// Encode
+        /// Encodes a string into tokens
+        /// Special tokens are artificial tokens
