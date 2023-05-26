@@ -37,4 +37,5 @@ namespace LLMSharp.OpenAi.Tokenizer
         /// tokens, since they can be used to trick a model into doing something we don't want it to do.
         /// This method uses the default implementation and throws an error if the text contains any valid special tokens.
         /// For more granular control of encoding special tokens use 'EncodeWithSpecialTokens'
-        /
+        /// </summary>
+        /// <param name="text">text to encode us
