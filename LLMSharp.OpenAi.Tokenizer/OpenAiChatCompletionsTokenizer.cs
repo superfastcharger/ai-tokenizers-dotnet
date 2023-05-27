@@ -38,4 +38,5 @@ namespace LLMSharp.OpenAi.Tokenizer
         /// This method uses the default implementation and throws an error if the text contains any valid special tokens.
         /// For more granular control of encoding special tokens use 'EncodeWithSpecialTokens'
         /// </summary>
-        /// <param name="text">text to encode us
+        /// <param name="text">text to encode using openai chat completions tokenizer</param>
+        /// <returns>e
