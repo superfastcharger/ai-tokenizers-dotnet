@@ -39,4 +39,5 @@ namespace LLMSharp.OpenAi.Tokenizer
         /// For more granular control of encoding special tokens use 'EncodeWithSpecialTokens'
         /// </summary>
         /// <param name="text">text to encode using openai chat completions tokenizer</param>
-        /// <returns>e
+        /// <returns>encoded tokens list of input text</returns>
+        public 
