@@ -42,4 +42,7 @@ namespace LLMSharp.OpenAi.Tokenizer
         /// <returns>encoded tokens list of input text</returns>
         public IReadOnlyList<int> Encode(string text)
         {
-            return this.toke
+            return this.tokenizer.Encode(text, new HashSet<string>(), null);
+        }
+
+        
