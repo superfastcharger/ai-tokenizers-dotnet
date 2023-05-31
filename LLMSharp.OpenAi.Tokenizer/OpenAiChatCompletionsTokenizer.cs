@@ -40,4 +40,6 @@ namespace LLMSharp.OpenAi.Tokenizer
         /// </summary>
         /// <param name="text">text to encode using openai chat completions tokenizer</param>
         /// <returns>encoded tokens list of input text</returns>
-        public 
+        public IReadOnlyList<int> Encode(string text)
+        {
+            return this.toke
