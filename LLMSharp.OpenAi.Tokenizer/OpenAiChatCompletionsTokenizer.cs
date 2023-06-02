@@ -45,4 +45,5 @@ namespace LLMSharp.OpenAi.Tokenizer
             return this.tokenizer.Encode(text, new HashSet<string>(), null);
         }
 
-        
+        /// <summary>
+        /// Counts number of byte pair enco
