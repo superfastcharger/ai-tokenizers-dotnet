@@ -53,4 +53,5 @@ namespace LLMSharp.OpenAi.Tokenizer
         /// This method uses the default implementation and throws an error if the text contains any valid special tokens.
         /// For more granular control of counting special tokens use 'CountWithSpecialTokens'
         /// </summary>
-        /// <param name="text">text input for counting tokens using gpt chatcompleti
+        /// <param name="text">text input for counting tokens using gpt chatcompletions tokenizer</param>
+        /// <returns>number of tokens in
