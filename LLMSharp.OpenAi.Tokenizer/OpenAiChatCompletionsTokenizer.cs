@@ -55,4 +55,4 @@ namespace LLMSharp.OpenAi.Tokenizer
         /// </summary>
         /// <param name="text">text input for counting tokens using gpt chatcompletions tokenizer</param>
         /// <returns>number of tokens in the given text</returns>
-        /// <exception cref="InvalidOp
+        /// <exception cref="InvalidOperationException">thrown when any of the disallowed special to
