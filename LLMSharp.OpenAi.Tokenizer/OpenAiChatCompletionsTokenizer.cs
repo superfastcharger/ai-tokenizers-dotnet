@@ -54,4 +54,5 @@ namespace LLMSharp.OpenAi.Tokenizer
         /// For more granular control of counting special tokens use 'CountWithSpecialTokens'
         /// </summary>
         /// <param name="text">text input for counting tokens using gpt chatcompletions tokenizer</param>
-        /// <returns>number of tokens in
+        /// <returns>number of tokens in the given text</returns>
+        /// <exception cref="InvalidOp
