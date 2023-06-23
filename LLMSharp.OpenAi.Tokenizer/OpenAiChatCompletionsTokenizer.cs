@@ -58,4 +58,8 @@ namespace LLMSharp.OpenAi.Tokenizer
         /// <exception cref="InvalidOperationException">thrown when any of the disallowed special tokens are found in the text</exception>
         public int CountTokens(string text)
         {
-            return this.tokenizer.CountTokens(te
+            return this.tokenizer.CountTokens(text, new HashSet<string>(), null);
+        }
+
+        /// <summary>
+        /
