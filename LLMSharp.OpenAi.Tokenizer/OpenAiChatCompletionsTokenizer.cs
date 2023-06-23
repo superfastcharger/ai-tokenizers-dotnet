@@ -62,4 +62,5 @@ namespace LLMSharp.OpenAi.Tokenizer
         }
 
         /// <summary>
-        /// Encodes a string into tokens using openai chat completions bpe rank
+        /// Encodes a string into tokens using openai chat completions bpe ranks
+        /// Special tokens are artificial tokens used to unlock cap
