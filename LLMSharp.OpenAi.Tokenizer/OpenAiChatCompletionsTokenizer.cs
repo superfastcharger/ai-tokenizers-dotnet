@@ -62,4 +62,4 @@ namespace LLMSharp.OpenAi.Tokenizer
         }
 
         /// <summary>
-        /
+        /// Encodes a string into tokens using openai chat completions bpe rank
