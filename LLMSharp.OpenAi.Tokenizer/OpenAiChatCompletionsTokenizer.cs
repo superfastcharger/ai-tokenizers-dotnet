@@ -66,4 +66,4 @@ namespace LLMSharp.OpenAi.Tokenizer
         /// Special tokens are artificial tokens used to unlock capabilities from a model,
         /// such as fill-in-the-middle.So we want to be careful about accidentally encoding special
         /// tokens, since they can be used to trick a model into doing something we don't want it to do.
-        /// 1. If the tokenizer needs to allow 
+        /// 1. If the tokenizer needs to allow all special tokens : pass null for allowedSpecialTokens and d
