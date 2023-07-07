@@ -71,4 +71,4 @@ namespace LLMSharp.OpenAi.Tokenizer
         /// 3. allowedSpecialTokens and disallowedSpecialTokens should contain only valid supported tokens by the model
         /// </summary>
         /// <param name="text">text to encode using openai chat completions tokenizer</param>
-        /// <param name="allowedSpecialTokens">special toke
+        /// <param name="allowedSpecialTokens">special tokens that are allowed for tokenization. If null, all the sp
