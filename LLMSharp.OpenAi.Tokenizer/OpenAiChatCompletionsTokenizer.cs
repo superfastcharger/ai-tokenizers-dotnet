@@ -78,4 +78,6 @@ namespace LLMSharp.OpenAi.Tokenizer
 
         public IReadOnlyList<int> EncodeWithSpecialTokens(string text, IEnumerable<string> allowedSpecialTokens, IEnumerable<string> disallowedSpecialTokens)
         {
+            return this.tokenizer.Encode(
+                text,
             
