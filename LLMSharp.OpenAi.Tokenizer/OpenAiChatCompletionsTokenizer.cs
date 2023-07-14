@@ -80,4 +80,4 @@ namespace LLMSharp.OpenAi.Tokenizer
         {
             return this.tokenizer.Encode(
                 text,
-            
+                (allowedSpecialTokens == null) ? null : new HashSet<string>(allo
