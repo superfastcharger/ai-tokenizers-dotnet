@@ -85,4 +85,5 @@ namespace LLMSharp.OpenAi.Tokenizer
         }
 
         /// <summary>
-        /// Counts number of byte pair encode
+        /// Counts number of byte pair encoded tokens for the given text input
+        /// Special tokens are arti
