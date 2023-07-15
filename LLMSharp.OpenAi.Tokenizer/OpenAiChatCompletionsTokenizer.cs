@@ -84,4 +84,5 @@ namespace LLMSharp.OpenAi.Tokenizer
                 (disallowedSpecialTokens == null) ? null : new HashSet<string>(disallowedSpecialTokens));
         }
 
-  
+        /// <summary>
+        /// Counts number of byte pair encode
