@@ -87,4 +87,4 @@ namespace LLMSharp.OpenAi.Tokenizer
         /// <summary>
         /// Counts number of byte pair encoded tokens for the given text input
         /// Special tokens are artificial tokens used to unlock capabilities from a model,
-        /// such 
+        /// such as fill-in-the-middle.So we want to be careful about accidentally 
