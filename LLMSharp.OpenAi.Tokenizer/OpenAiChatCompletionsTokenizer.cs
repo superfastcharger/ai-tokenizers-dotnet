@@ -94,4 +94,4 @@ namespace LLMSharp.OpenAi.Tokenizer
         /// 3. allowedSpecialTokens and disallowedSpecialTokens should contain only valid supported tokens by the model
         /// </summary>
         /// <param name="text">text input for counting tokens using gpt chatcompletions tokenizer</param>
-        /// <param na
+        /// <param name="allowedSpecialTokens">special tokens that are allowed for tokenization. If null
