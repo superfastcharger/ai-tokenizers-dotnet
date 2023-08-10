@@ -102,4 +102,5 @@ namespace LLMSharp.OpenAi.Tokenizer
         public int CountWithSpecialTokens(string text, IEnumerable<string> allowedSpecialTokens, IEnumerable<string> disallowedSpecialTokens)
         {
             return this.tokenizer.CountTokens(
-    
+                text,
+                (allowedSpecialTokens == null)
