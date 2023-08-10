@@ -99,4 +99,7 @@ namespace LLMSharp.OpenAi.Tokenizer
         /// <returns>number of tokens for the given text</returns>
         /// <exception cref="InvalidOperationException">thrown when any of the disallowed special tokens are found in the text</exception>
 
-        public int CountWithSpecialTokens(string text, IEnumerable<string> allowedSpecialTokens, IEnumerable<string> disallowedSpeci
+        public int CountWithSpecialTokens(string text, IEnumerable<string> allowedSpecialTokens, IEnumerable<string> disallowedSpecialTokens)
+        {
+            return this.tokenizer.CountTokens(
+    
