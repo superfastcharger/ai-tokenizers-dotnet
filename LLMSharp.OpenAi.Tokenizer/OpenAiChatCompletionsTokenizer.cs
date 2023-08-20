@@ -104,4 +104,4 @@ namespace LLMSharp.OpenAi.Tokenizer
             return this.tokenizer.CountTokens(
                 text,
                 (allowedSpecialTokens == null) ? null : new HashSet<string>(allowedSpecialTokens),
-      
+                (disallowedSpecialTokens == null) ? null : new HashSet<string>(
