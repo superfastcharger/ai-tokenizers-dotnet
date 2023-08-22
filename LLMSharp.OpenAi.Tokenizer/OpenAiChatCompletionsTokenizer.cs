@@ -113,4 +113,6 @@ namespace LLMSharp.OpenAi.Tokenizer
         /// </summary>
         /// <param name="tokens">list of tokens to decode</param>
         /// <returns>decoded string using the tokens</returns>
-        public
+        public string Decode(IEnumerable<int> tokens)
+        {
+            re
