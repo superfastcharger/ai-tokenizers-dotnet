@@ -110,4 +110,5 @@ namespace LLMSharp.OpenAi.Tokenizer
         /// <summary>
         /// Decodes a list of tokens into a string using openai chat completions bpe ranks
         /// Useful for visualizing tokenization
-  
+        /// </summary>
+        /// <param name="tokens">list of tokens to decode</param>
