@@ -112,3 +112,5 @@ namespace LLMSharp.OpenAi.Tokenizer
         /// Useful for visualizing tokenization
         /// </summary>
         /// <param name="tokens">list of tokens to decode</param>
+        /// <returns>decoded string using the tokens</returns>
+        public
