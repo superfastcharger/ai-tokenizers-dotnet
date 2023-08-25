@@ -1,3 +1,5 @@
 ﻿namespace LLMSharp.TokenizerMap.Builder
 {
-    internal cla
+    internal class Program
+    {
+        private const string TokenizeClaude = "claude"
