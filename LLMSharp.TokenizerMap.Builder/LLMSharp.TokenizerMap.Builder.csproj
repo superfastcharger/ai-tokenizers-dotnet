@@ -10,3 +10,15 @@
     <AssemblyOriginatorKeyFile>..\llmsharp-tokenizers.snk</AssemblyOriginatorKeyFile>
     <DelaySign>True</DelaySign>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Protobuf" Version="3.24.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="cl100k_base.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
