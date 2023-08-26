@@ -2,4 +2,7 @@
 {
     internal class Program
     {
-        private const string TokenizeClaude = "claude"
+        private const string TokenizeClaude = "claude";
+        private const string TokenizeGptChat = "gptchat";
+
+        
