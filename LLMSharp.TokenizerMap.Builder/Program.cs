@@ -7,4 +7,5 @@
 
         static async Task Main(string[] args)
         {
-            us
+            using var cts = new CancellationTokenSource();
+            Console.CancelKeyPres
