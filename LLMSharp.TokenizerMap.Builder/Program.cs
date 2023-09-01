@@ -8,4 +8,6 @@
         static async Task Main(string[] args)
         {
             using var cts = new CancellationTokenSource();
-            Console.CancelKeyPres
+            Console.CancelKeyPress += (sender, e) =>
+            {
+                e.Cancel = t
