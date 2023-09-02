@@ -10,4 +10,8 @@
             using var cts = new CancellationTokenSource();
             Console.CancelKeyPress += (sender, e) =>
             {
-                e.Cancel = t
+                e.Cancel = true;
+                cts.Cancel();
+            };
+
+            if(args.Length ==
