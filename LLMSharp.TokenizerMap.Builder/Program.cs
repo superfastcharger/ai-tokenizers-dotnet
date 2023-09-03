@@ -14,4 +14,6 @@
                 cts.Cancel();
             };
 
-            if(args.Length ==
+            if(args.Length == 0)
+            {
+                await TokenizeAndSerialize(string.Empty, cts.Toke
