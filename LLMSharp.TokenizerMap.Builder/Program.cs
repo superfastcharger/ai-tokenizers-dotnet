@@ -20,4 +20,6 @@
             }
             else
             {
-                aw
+                await TokenizeAndSerialize(args[0], cts.Token);
+            }
+  
