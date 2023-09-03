@@ -16,4 +16,8 @@
 
             if(args.Length == 0)
             {
-                await TokenizeAndSerialize(string.Empty, cts.Toke
+                await TokenizeAndSerialize(string.Empty, cts.Token);
+            }
+            else
+            {
+                aw
