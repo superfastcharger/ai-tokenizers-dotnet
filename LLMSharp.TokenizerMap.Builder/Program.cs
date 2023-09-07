@@ -22,4 +22,6 @@
             {
                 await TokenizeAndSerialize(args[0], cts.Token);
             }
-  
+        }
+
+        static async Task TokenizeAndSerialize(string model, Canc
