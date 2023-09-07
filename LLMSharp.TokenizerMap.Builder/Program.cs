@@ -24,4 +24,6 @@
             }
         }
 
-        static async Task TokenizeAndSerialize(string model, Canc
+        static async Task TokenizeAndSerialize(string model, CancellationToken cancellationToken)
+        {
+            TokenizerMapSerializer ser
