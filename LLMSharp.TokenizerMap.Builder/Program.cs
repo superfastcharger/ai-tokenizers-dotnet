@@ -26,4 +26,6 @@
 
         static async Task TokenizeAndSerialize(string model, CancellationToken cancellationToken)
         {
-            TokenizerMapSerializer ser
+            TokenizerMapSerializer serializer = new();
+            
+            if (string.IsNullOrEmp
