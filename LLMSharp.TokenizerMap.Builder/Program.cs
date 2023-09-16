@@ -31,4 +31,4 @@
             if (string.IsNullOrEmpty(model))
             {
                 var tokenizeAnthropic = serializer.SerializeClaudeTokenMapsAsync(cancellationToken);
-                va
+                var tokenizeGpt = serializer.SerializeGptTokenMapsAsync(cancellationToke
