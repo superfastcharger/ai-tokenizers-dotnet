@@ -28,4 +28,6 @@
         {
             TokenizerMapSerializer serializer = new();
             
-            if (string.IsNullOrEmp
+            if (string.IsNullOrEmpty(model))
+            {
+                var tokenizeAnthropic = seri
