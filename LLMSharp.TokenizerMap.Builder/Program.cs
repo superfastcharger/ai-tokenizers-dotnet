@@ -30,4 +30,5 @@
             
             if (string.IsNullOrEmpty(model))
             {
-                var tokenizeAnthropic = seri
+                var tokenizeAnthropic = serializer.SerializeClaudeTokenMapsAsync(cancellationToken);
+                va
