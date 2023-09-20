@@ -33,4 +33,5 @@
                 var tokenizeAnthropic = serializer.SerializeClaudeTokenMapsAsync(cancellationToken);
                 var tokenizeGpt = serializer.SerializeGptTokenMapsAsync(cancellationToken);
                 await Task.WhenAll(tokenizeAnthropic, tokenizeGpt);
-        
+            }
+            else if(string.Equals(model, TokenizeClaude, StringCo
