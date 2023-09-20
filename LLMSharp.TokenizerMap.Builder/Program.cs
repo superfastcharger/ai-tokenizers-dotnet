@@ -36,4 +36,5 @@
             }
             else if(string.Equals(model, TokenizeClaude, StringComparison.OrdinalIgnoreCase)) 
             { 
-                await serializ
+                await serializer.SerializeClaudeTokenMapsAsync(cancellationToken);
+        
