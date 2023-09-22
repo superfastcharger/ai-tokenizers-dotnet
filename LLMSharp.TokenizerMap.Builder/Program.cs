@@ -40,4 +40,4 @@
             }
             else if (string.Equals(model, TokenizeGptChat, StringComparison.OrdinalIgnoreCase))
             {
-                await
+                await serializer.SerializeGptTokenMapsAsync(cancellationToken
