@@ -37,4 +37,5 @@
             else if(string.Equals(model, TokenizeClaude, StringComparison.OrdinalIgnoreCase)) 
             { 
                 await serializer.SerializeClaudeTokenMapsAsync(cancellationToken);
-        
+            }
+            else if (string.Equals(model, TokenizeGptChat, 
