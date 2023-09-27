@@ -66,3 +66,74 @@ namespace LLMSharp.TokenizerMap.Builder
             {
                 Console.Error.WriteLine($"Invalid Json found @{jsonFilePath}. Terminating tokenizer maps construction");
                 return null;
+            }
+
+            return ConstructFromRegistry(jObj, cancellationToken);
+        }
+
+
+        /// <summary>
+        /// Construct TokenizerMaps by parsing a JsonObject. Will return null if the JsonObject is not valid.
+        /// Expects a JsonObject with 'bpe_ranks' , 'pat_str' properties and an optional 'special_tokens' property.
+        /// </summary>
+        /// <param name="json">Json object to parse and construct tokenizer maps</param>
+        /// <param name="cancellationToken">Cancellation Token</param>
+        /// <returns>Constructed tokenizer maps. null if the json is not valid</returns>
+        internal TokenizerMaps? ConstructFromRegistry(TokenizerRegistry reg, CancellationToken cancellationToken)
+        {                      
+            if (string.IsNullOrEmpty(reg.BpeRanks))
+            {
+                Console.Error.WriteLine("there is no json property found for bpe_ranks (byte pair encoding ranks). Terminating TokenMap construction");
+                return null;
+            }            
+
+            if (string.IsNullOrEmpty(reg.PatternString))
+            {
+                Console.Error.WriteLine("there is no json property found for pat_str (regex pattern string). Terminating TokenMap construction");
+                return null;
+            }                        
+
+            return Build(reg.BpeRanks, reg.PatternString, reg.SpecialTokens, cancellationToken);
+        }
+
+        /// <summary>
+        /// Constructs TokenizerMaps taking in bytepairencoding ranks and other additional parameters
+        /// </summary>
+        /// <param name="bpeRanks">a string formed by joining various base64 encoded strings separated by space.
+        /// Rank of each base64 encoded string is incremented from the offset based on the order in which they appear.</param>
+        /// <param name="stringPattern">regex string pattern used to split the given text for bpe</param>
+        /// <param name="specialTokens">Key value pair of any special tokens to be considered</param>
+        /// <param name="cancellation">Cancellation Token</param>
+        /// <returns>Constructed TokenizerMaps Object</returns>
+        internal TokenizerMaps Build(string bpeRanks, string stringPattern, IDictionary<string, int>? specialTokens, CancellationToken cancellation)
+        {
+            var maps = new TokenizerMaps();
+            Array.ForEach(bpeRanks.Split("\n", StringSplitOptions.RemoveEmptyEntries), line =>
+            {
+                string[] splits = line.Split(" ");
+                int offset = int.Parse(splits[1]);
+                for (int i = 2; i < splits.Length; i++)
+                {
+                    if (cancellation.IsCancellationRequested)
+                    {
+                        cancellation.ThrowIfCancellationRequested();
+                    }
+
+                    int rank = offset + i - 2;
+                    maps.TextMap.Add(rank, ByteString.FromBase64(splits[i]));
+                    maps.RankMap.Add(splits[i], rank);
+                }
+            });
+
+            if (specialTokens != null)
+            {
+                foreach (var token in specialTokens)
+                {
+                    maps.SpecialTokens.Add(token.Key, token.Value);
+                    maps.InverseSpecialTokens.Add(token.Value, ByteString.CopyFrom(System.Text.Encoding.UTF8.GetBytes(token.Key)));
+                }
+            }
+
+            if (!string.IsNullOrEmpty(stringPattern))
+            {
+                maps.RegexPattern = stringPattern;
