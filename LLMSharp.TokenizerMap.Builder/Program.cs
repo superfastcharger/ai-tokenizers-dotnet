@@ -44,4 +44,7 @@
             }
             else
             {
-                Cons
+                Console.Error.WriteLine($"Unknown model: {model}");
+            }
+        }
+    
