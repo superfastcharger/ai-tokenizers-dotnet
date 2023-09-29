@@ -137,3 +137,9 @@ namespace LLMSharp.TokenizerMap.Builder
             if (!string.IsNullOrEmpty(stringPattern))
             {
                 maps.RegexPattern = stringPattern;
+            }
+
+            return maps;
+        }
+    }
+}
