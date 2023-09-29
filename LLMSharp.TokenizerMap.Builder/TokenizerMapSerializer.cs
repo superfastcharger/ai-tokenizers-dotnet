@@ -58,3 +58,7 @@ namespace LLMSharp.TokenizerMap.Builder
 
             using var output = File.Create(claudeSerializedFilePath);
             tokenMaps.WriteTo(output);
+            Console.WriteLine("Success: SerializeClaudeTokenMapsAsync");
+        }
+    }
+}
