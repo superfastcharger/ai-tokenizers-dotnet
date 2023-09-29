@@ -139,3 +139,84 @@ public sealed partial class TokenizerMaps : pb::IMessage<TokenizerMaps>
 
   /// <summary>Field number for the "RegexPattern" field.</summary>
   public const int RegexPatternFieldNumber = 5;
+  private string regexPattern_ = "";
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public string RegexPattern {
+    get { return regexPattern_; }
+    set {
+      regexPattern_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+    }
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public override bool Equals(object other) {
+    return Equals(other as TokenizerMaps);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public bool Equals(TokenizerMaps other) {
+    if (ReferenceEquals(other, null)) {
+      return false;
+    }
+    if (ReferenceEquals(other, this)) {
+      return true;
+    }
+    if (!TextMap.Equals(other.TextMap)) return false;
+    if (!SpecialTokens.Equals(other.SpecialTokens)) return false;
+    if (!RankMap.Equals(other.RankMap)) return false;
+    if (!InverseSpecialTokens.Equals(other.InverseSpecialTokens)) return false;
+    if (RegexPattern != other.RegexPattern) return false;
+    return Equals(_unknownFields, other._unknownFields);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public override int GetHashCode() {
+    int hash = 1;
+    hash ^= TextMap.GetHashCode();
+    hash ^= SpecialTokens.GetHashCode();
+    hash ^= RankMap.GetHashCode();
+    hash ^= InverseSpecialTokens.GetHashCode();
+    if (RegexPattern.Length != 0) hash ^= RegexPattern.GetHashCode();
+    if (_unknownFields != null) {
+      hash ^= _unknownFields.GetHashCode();
+    }
+    return hash;
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public override string ToString() {
+    return pb::JsonFormatter.ToDiagnosticString(this);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public void WriteTo(pb::CodedOutputStream output) {
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    output.WriteRawMessage(this);
+  #else
+    textMap_.WriteTo(output, _map_textMap_codec);
+    specialTokens_.WriteTo(output, _map_specialTokens_codec);
+    rankMap_.WriteTo(output, _map_rankMap_codec);
+    inverseSpecialTokens_.WriteTo(output, _map_inverseSpecialTokens_codec);
+    if (RegexPattern.Length != 0) {
+      output.WriteRawTag(42);
+      output.WriteString(RegexPattern);
+    }
+    if (_unknownFields != null) {
+      _unknownFields.WriteTo(output);
+    }
+  #endif
+  }
+
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+    textMap_.WriteTo(ref output, _map_textMap_codec);
+    specialTokens_.WriteTo(ref output, _map_specialTokens_codec);
+    rankMap_.WriteTo(ref output, _map_rankMap_codec);
