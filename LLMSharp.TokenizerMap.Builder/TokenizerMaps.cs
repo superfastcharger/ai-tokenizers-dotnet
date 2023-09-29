@@ -75,3 +75,67 @@ public sealed partial class TokenizerMaps : pb::IMessage<TokenizerMaps>
   }
 
   partial void OnConstruction();
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public TokenizerMaps(TokenizerMaps other) : this() {
+    textMap_ = other.textMap_.Clone();
+    specialTokens_ = other.specialTokens_.Clone();
+    rankMap_ = other.rankMap_.Clone();
+    inverseSpecialTokens_ = other.inverseSpecialTokens_.Clone();
+    regexPattern_ = other.regexPattern_;
+    _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public TokenizerMaps Clone() {
+    return new TokenizerMaps(this);
+  }
+
+  /// <summary>Field number for the "TextMap" field.</summary>
+  public const int TextMapFieldNumber = 1;
+  private static readonly pbc::MapField<int, pb::ByteString>.Codec _map_textMap_codec
+      = new pbc::MapField<int, pb::ByteString>.Codec(pb::FieldCodec.ForInt32(8, 0), pb::FieldCodec.ForBytes(18, pb::ByteString.Empty), 10);
+  private readonly pbc::MapField<int, pb::ByteString> textMap_ = new pbc::MapField<int, pb::ByteString>();
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public pbc::MapField<int, pb::ByteString> TextMap {
+    get { return textMap_; }
+  }
+
+  /// <summary>Field number for the "SpecialTokens" field.</summary>
+  public const int SpecialTokensFieldNumber = 2;
+  private static readonly pbc::MapField<string, int>.Codec _map_specialTokens_codec
+      = new pbc::MapField<string, int>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForInt32(16, 0), 18);
+  private readonly pbc::MapField<string, int> specialTokens_ = new pbc::MapField<string, int>();
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public pbc::MapField<string, int> SpecialTokens {
+    get { return specialTokens_; }
+  }
+
+  /// <summary>Field number for the "RankMap" field.</summary>
+  public const int RankMapFieldNumber = 3;
+  private static readonly pbc::MapField<string, int>.Codec _map_rankMap_codec
+      = new pbc::MapField<string, int>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForInt32(16, 0), 26);
+  private readonly pbc::MapField<string, int> rankMap_ = new pbc::MapField<string, int>();
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public pbc::MapField<string, int> RankMap {
+    get { return rankMap_; }
+  }
+
+  /// <summary>Field number for the "InverseSpecialTokens" field.</summary>
+  public const int InverseSpecialTokensFieldNumber = 4;
+  private static readonly pbc::MapField<int, pb::ByteString>.Codec _map_inverseSpecialTokens_codec
+      = new pbc::MapField<int, pb::ByteString>.Codec(pb::FieldCodec.ForInt32(8, 0), pb::FieldCodec.ForBytes(18, pb::ByteString.Empty), 34);
+  private readonly pbc::MapField<int, pb::ByteString> inverseSpecialTokens_ = new pbc::MapField<int, pb::ByteString>();
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public pbc::MapField<int, pb::ByteString> InverseSpecialTokens {
+    get { return inverseSpecialTokens_; }
+  }
+
+  /// <summary>Field number for the "RegexPattern" field.</summary>
+  public const int RegexPatternFieldNumber = 5;
