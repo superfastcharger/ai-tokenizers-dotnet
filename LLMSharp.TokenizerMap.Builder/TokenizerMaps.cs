@@ -291,3 +291,54 @@ public sealed partial class TokenizerMaps : pb::IMessage<TokenizerMaps>
         case 34: {
           inverseSpecialTokens_.AddEntriesFrom(input, _map_inverseSpecialTokens_codec);
           break;
+        }
+        case 42: {
+          RegexPattern = input.ReadString();
+          break;
+        }
+      }
+    }
+  #endif
+  }
+
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+    uint tag;
+    while ((tag = input.ReadTag()) != 0) {
+      switch(tag) {
+        default:
+          _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+          break;
+        case 10: {
+          textMap_.AddEntriesFrom(ref input, _map_textMap_codec);
+          break;
+        }
+        case 18: {
+          specialTokens_.AddEntriesFrom(ref input, _map_specialTokens_codec);
+          break;
+        }
+        case 26: {
+          rankMap_.AddEntriesFrom(ref input, _map_rankMap_codec);
+          break;
+        }
+        case 34: {
+          inverseSpecialTokens_.AddEntriesFrom(ref input, _map_inverseSpecialTokens_codec);
+          break;
+        }
+        case 42: {
+          RegexPattern = input.ReadString();
+          break;
+        }
+      }
+    }
+  }
+  #endif
+
+}
+
+#endregion
+
+
+#endregion Designer generated code
