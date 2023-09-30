@@ -220,3 +220,74 @@ public sealed partial class TokenizerMaps : pb::IMessage<TokenizerMaps>
     textMap_.WriteTo(ref output, _map_textMap_codec);
     specialTokens_.WriteTo(ref output, _map_specialTokens_codec);
     rankMap_.WriteTo(ref output, _map_rankMap_codec);
+    inverseSpecialTokens_.WriteTo(ref output, _map_inverseSpecialTokens_codec);
+    if (RegexPattern.Length != 0) {
+      output.WriteRawTag(42);
+      output.WriteString(RegexPattern);
+    }
+    if (_unknownFields != null) {
+      _unknownFields.WriteTo(ref output);
+    }
+  }
+  #endif
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public int CalculateSize() {
+    int size = 0;
+    size += textMap_.CalculateSize(_map_textMap_codec);
+    size += specialTokens_.CalculateSize(_map_specialTokens_codec);
+    size += rankMap_.CalculateSize(_map_rankMap_codec);
+    size += inverseSpecialTokens_.CalculateSize(_map_inverseSpecialTokens_codec);
+    if (RegexPattern.Length != 0) {
+      size += 1 + pb::CodedOutputStream.ComputeStringSize(RegexPattern);
+    }
+    if (_unknownFields != null) {
+      size += _unknownFields.CalculateSize();
+    }
+    return size;
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public void MergeFrom(TokenizerMaps other) {
+    if (other == null) {
+      return;
+    }
+    textMap_.MergeFrom(other.textMap_);
+    specialTokens_.MergeFrom(other.specialTokens_);
+    rankMap_.MergeFrom(other.rankMap_);
+    inverseSpecialTokens_.MergeFrom(other.inverseSpecialTokens_);
+    if (other.RegexPattern.Length != 0) {
+      RegexPattern = other.RegexPattern;
+    }
+    _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+  }
+
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public void MergeFrom(pb::CodedInputStream input) {
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    input.ReadRawMessage(this);
+  #else
+    uint tag;
+    while ((tag = input.ReadTag()) != 0) {
+      switch(tag) {
+        default:
+          _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+          break;
+        case 10: {
+          textMap_.AddEntriesFrom(input, _map_textMap_codec);
+          break;
+        }
+        case 18: {
+          specialTokens_.AddEntriesFrom(input, _map_specialTokens_codec);
+          break;
+        }
+        case 26: {
+          rankMap_.AddEntriesFrom(input, _map_rankMap_codec);
+          break;
+        }
+        case 34: {
+          inverseSpecialTokens_.AddEntriesFrom(input, _map_inverseSpecialTokens_codec);
+          break;
