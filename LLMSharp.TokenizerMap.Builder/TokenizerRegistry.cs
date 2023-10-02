@@ -9,3 +9,5 @@ namespace LLMSharp.TokenizerMap.Builder
 {
     public class TokenizerRegistry
     {
+        [JsonPropertyName("explicit_n_vocab")]
+        public int Expl
