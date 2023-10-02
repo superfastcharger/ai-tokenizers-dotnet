@@ -12,4 +12,7 @@ namespace LLMSharp.TokenizerMap.Builder
         [JsonPropertyName("explicit_n_vocab")]
         public int ExplicitVocabCount { get; set; }
 
-        [JsonPropertyName("pat_s
+        [JsonPropertyName("pat_str")]
+        public string? PatternString { get; set; }
+
+        [JsonPropertyNa
