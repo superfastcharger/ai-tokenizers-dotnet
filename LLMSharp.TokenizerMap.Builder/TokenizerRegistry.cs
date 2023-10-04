@@ -15,4 +15,5 @@ namespace LLMSharp.TokenizerMap.Builder
         [JsonPropertyName("pat_str")]
         public string? PatternString { get; set; }
 
-        [JsonPropertyNa
+        [JsonPropertyName("special_tokens")]
+        public IDictionary<string, int>? SpecialTo
