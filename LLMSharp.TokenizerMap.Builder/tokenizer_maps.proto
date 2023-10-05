@@ -1,1 +1,5 @@
 ﻿syntax = "proto3";
+
+message TokenizerMaps {
+  map<int32, bytes> TextMap = 1;
+  map<stri
