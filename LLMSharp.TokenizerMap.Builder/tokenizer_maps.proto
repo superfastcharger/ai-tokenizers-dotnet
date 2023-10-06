@@ -5,4 +5,5 @@ message TokenizerMaps {
   map<string, int32> SpecialTokens = 2;
   map<string, int32> RankMap = 3;
   map<int32, bytes> InverseSpecialTokens = 4;
-  string RegexPattern 
+  string RegexPattern = 5;
+}
