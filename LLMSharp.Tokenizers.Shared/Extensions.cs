@@ -9,4 +9,7 @@ namespace LLMSharp.Tokenizers.Shared
     /// <summary>
     /// Helpful extensions for string manipulation
     /// </summary>
-    internal st
+    internal static class Extensions
+    {
+        /// <summary>
+        /// Escapes any specia
