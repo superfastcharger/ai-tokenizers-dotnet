@@ -7,4 +7,6 @@ using System.Text.RegularExpressions;
 namespace LLMSharp.Tokenizers.Shared
 {
     /// <summary>
-    /// Helpful ext
+    /// Helpful extensions for string manipulation
+    /// </summary>
+    internal st
