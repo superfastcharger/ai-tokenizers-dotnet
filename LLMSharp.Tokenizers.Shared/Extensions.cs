@@ -12,4 +12,6 @@ namespace LLMSharp.Tokenizers.Shared
     internal static class Extensions
     {
         /// <summary>
-        /// Escapes any specia
+        /// Escapes any special chracters in the input
+        /// </summary>
+        /// <pa
