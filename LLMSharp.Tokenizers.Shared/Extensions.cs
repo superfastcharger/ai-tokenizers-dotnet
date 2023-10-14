@@ -15,4 +15,5 @@ namespace LLMSharp.Tokenizers.Shared
         /// Escapes any special chracters in the input
         /// </summary>
         /// <param name="input"></param>
-        /// <returns>returns the str
+        /// <returns>returns the string with special characters escaped</returns>
+        internal 
