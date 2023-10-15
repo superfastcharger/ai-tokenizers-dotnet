@@ -16,4 +16,6 @@ namespace LLMSharp.Tokenizers.Shared
         /// </summary>
         /// <param name="input"></param>
         /// <returns>returns the string with special characters escaped</returns>
-        internal 
+        internal static string EscapeRegex(this string input)
+        {
+            return Regex.
