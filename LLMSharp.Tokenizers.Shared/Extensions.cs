@@ -22,4 +22,5 @@ namespace LLMSharp.Tokenizers.Shared
         }
 
 
-    
+        /// <summary>
+        /// Generates a regex that matches existence of any token in to
