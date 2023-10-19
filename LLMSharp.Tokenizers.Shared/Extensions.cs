@@ -23,4 +23,6 @@ namespace LLMSharp.Tokenizers.Shared
 
 
         /// <summary>
-        /// Generates a regex that matches existence of any token in to
+        /// Generates a regex that matches existence of any token in tokens array
+        /// </summary>
+        /// <param name="tokens">an a
