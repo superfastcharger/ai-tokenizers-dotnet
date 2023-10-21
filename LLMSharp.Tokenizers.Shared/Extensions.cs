@@ -27,4 +27,6 @@ namespace LLMSharp.Tokenizers.Shared
         /// </summary>
         /// <param name="tokens">an array of tokens for generating regex</param>
         /// <returns>returns the generated regex</returns>
-        internal static Regex CreateRegexFro
+        internal static Regex CreateRegexFromTokens(this IEnumerable<string> tokens)
+        {
+            va
