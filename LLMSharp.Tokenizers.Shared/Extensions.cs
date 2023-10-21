@@ -29,4 +29,5 @@ namespace LLMSharp.Tokenizers.Shared
         /// <returns>returns the generated regex</returns>
         internal static Regex CreateRegexFromTokens(this IEnumerable<string> tokens)
         {
-            va
+            var builder = new StringBuilder();
+            foreach (var token in to
