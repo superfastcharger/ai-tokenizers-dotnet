@@ -26,4 +26,5 @@ namespace LLMSharp.Tokenizers.Shared
         /// Generates a regex that matches existence of any token in tokens array
         /// </summary>
         /// <param name="tokens">an array of tokens for generating regex</param>
-        /// <returns>returns the
+        /// <returns>returns the generated regex</returns>
+        internal static Regex CreateRegexFro
