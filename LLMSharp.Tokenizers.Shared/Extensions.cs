@@ -33,4 +33,7 @@ namespace LLMSharp.Tokenizers.Shared
             foreach (var token in tokens)
             {
                 if (builder.Length > 0)
-      
+                {
+                    builder.Append('|');
+                }
+     
