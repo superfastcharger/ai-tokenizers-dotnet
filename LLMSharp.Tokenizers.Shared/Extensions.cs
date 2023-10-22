@@ -30,4 +30,7 @@ namespace LLMSharp.Tokenizers.Shared
         internal static Regex CreateRegexFromTokens(this IEnumerable<string> tokens)
         {
             var builder = new StringBuilder();
-            foreach (var token in to
+            foreach (var token in tokens)
+            {
+                if (builder.Length > 0)
+      
