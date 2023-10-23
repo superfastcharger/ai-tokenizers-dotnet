@@ -38,3 +38,5 @@ namespace LLMSharp.Tokenizers.Shared
                 }
                 builder.Append(token.EscapeRegex());
             }
+            var pattern = builder.ToString();
+            retur
