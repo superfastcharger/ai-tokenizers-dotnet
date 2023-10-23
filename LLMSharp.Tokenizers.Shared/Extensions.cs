@@ -36,4 +36,5 @@ namespace LLMSharp.Tokenizers.Shared
                 {
                     builder.Append('|');
                 }
-     
+                builder.Append(token.EscapeRegex());
+            }
