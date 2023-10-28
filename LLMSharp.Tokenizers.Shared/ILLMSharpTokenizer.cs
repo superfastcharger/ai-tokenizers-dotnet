@@ -8,4 +8,5 @@ namespace LLMSharp.Tokenizers.Shared
     public interface ILLMSharpTokenizer
     {
         /// <summary>
-        ///
+        /// Byte Pair Encodes a string into tokens
+        /// Special tokens are 
