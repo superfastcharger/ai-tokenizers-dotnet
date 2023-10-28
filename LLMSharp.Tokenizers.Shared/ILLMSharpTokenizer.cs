@@ -2,4 +2,5 @@ using System.Collections.Generic;
 
 namespace LLMSharp.Tokenizers.Shared
 {
-    /// <summar
+    /// <summary>
+    /// A common interface definition for any LLMSharpTokenizer to
