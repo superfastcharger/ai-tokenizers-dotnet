@@ -13,4 +13,6 @@ namespace LLMSharp.Tokenizers.Shared
         /// such as fill-in-the-middle.So we want to be careful about accidentally encoding special
         /// tokens, since they can be used to trick a model into doing something we don't want it to do.
         /// encode will raise an error if it encounters text that corresponds
-        /// to a spe
+        /// to a special token.
+        /// </summary>
+        /// <param name="tex
