@@ -15,4 +15,5 @@ namespace LLMSharp.Tokenizers.Shared
         /// encode will raise an error if it encounters text that corresponds
         /// to a special token.
         /// </summary>
-        /// <param name="tex
+        /// <param name="text">text input for counting number of tokens</param>        
+        /// <return
