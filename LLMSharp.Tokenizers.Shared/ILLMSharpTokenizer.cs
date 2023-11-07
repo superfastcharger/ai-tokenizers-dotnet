@@ -17,4 +17,4 @@ namespace LLMSharp.Tokenizers.Shared
         /// </summary>
         /// <param name="text">text input for counting number of tokens</param>        
         /// <returns>list of byte pair encoded tokens for the text</returns>
-        /// <exceptio
+        /// <exception cref="InvalidOperationException">thrown when any of the disallowed special token
