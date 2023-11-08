@@ -18,4 +18,7 @@ namespace LLMSharp.Tokenizers.Shared
         /// <param name="text">text input for counting number of tokens</param>        
         /// <returns>list of byte pair encoded tokens for the text</returns>
         /// <exception cref="InvalidOperationException">thrown when any of the disallowed special tokens are found in the text</exception>
-        IReadOnlyList<int> En
+        IReadOnlyList<int> Encode(string text);
+
+        /// <summary>
+        /// Counts number of byte pair 
