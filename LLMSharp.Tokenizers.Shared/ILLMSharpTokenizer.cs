@@ -21,4 +21,5 @@ namespace LLMSharp.Tokenizers.Shared
         IReadOnlyList<int> Encode(string text);
 
         /// <summary>
-        /// Counts number of byte pair 
+        /// Counts number of byte pair encoded tokens for the given text input
+        /// Special tokens ar
