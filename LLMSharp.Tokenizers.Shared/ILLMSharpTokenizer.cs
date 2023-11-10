@@ -28,4 +28,5 @@ namespace LLMSharp.Tokenizers.Shared
         /// CountTokens will raise an error if it encounters text that corresponds
         /// to a special token.
         /// </summary>
-        /// <param nam
+        /// <param name="text">text input for counting number of tokens</param>
+        /// <pa
