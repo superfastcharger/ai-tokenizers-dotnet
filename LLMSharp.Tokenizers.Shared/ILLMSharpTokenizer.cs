@@ -29,4 +29,5 @@ namespace LLMSharp.Tokenizers.Shared
         /// to a special token.
         /// </summary>
         /// <param name="text">text input for counting number of tokens</param>
-        /// <param name="allowedSpecial">special tokens that are allowed for tokenization. If null, all the special tokens supported by the model are allowed. If empty, none
+        /// <param name="allowedSpecial">special tokens that are allowed for tokenization. If null, all the special tokens supported by the model are allowed. If empty, none of the special tokens are allowed.</param>
+        /// <param nam
