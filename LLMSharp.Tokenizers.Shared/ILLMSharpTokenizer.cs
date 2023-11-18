@@ -37,4 +37,4 @@ namespace LLMSharp.Tokenizers.Shared
 
         /// <summary>
         /// Byte Pair Encodes a string into tokens
-        /// Spe
+        /// Special tokens are artificial tokens used to unlock capabilities from a mo
