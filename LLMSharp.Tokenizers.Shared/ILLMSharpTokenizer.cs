@@ -35,4 +35,6 @@ namespace LLMSharp.Tokenizers.Shared
         /// <exception cref="InvalidOperationException">thrown when any of the disallowed special tokens are found in the text</exception>
         int CountTokens(string text);
 
-        /
+        /// <summary>
+        /// Byte Pair Encodes a string into tokens
+        /// Spe
