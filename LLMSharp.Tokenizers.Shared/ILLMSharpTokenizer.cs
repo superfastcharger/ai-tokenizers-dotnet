@@ -40,4 +40,5 @@ namespace LLMSharp.Tokenizers.Shared
         /// Special tokens are artificial tokens used to unlock capabilities from a model,
         /// such as fill-in-the-middle.So we want to be careful about accidentally encoding special
         /// tokens, since they can be used to trick a model into doing something we don't want it to do.
-        /// Hence, by default, encode will ra
+        /// Hence, by default, encode will raise an error if it encounters text that corresponds
+        /// to a special
