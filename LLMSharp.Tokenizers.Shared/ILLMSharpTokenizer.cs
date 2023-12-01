@@ -45,4 +45,5 @@ namespace LLMSharp.Tokenizers.Shared
         /// and `disallowed_special` parameters.In particular:
         /// Setting 'disallowedSpecial' to null will prevent this function from raising errors and
         /// cause all text corresponding to special tokens to be encoded as natural text.
-        /// Setting 'allowedSpecial' to null will cause this function t
+        /// Setting 'allowedSpecial' to null will cause this function to treat all text
+        /// corresponding to special tokens to
