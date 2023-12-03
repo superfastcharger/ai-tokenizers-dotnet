@@ -49,4 +49,4 @@ namespace LLMSharp.Tokenizers.Shared
         /// corresponding to special tokens to be encoded as special tokens.
         /// </summary>
         /// <param name="text">text input for counting number of tokens</param>
-        /// <para
+        /// <param name="allowedSpecial">special tokens that are allowed for tok
