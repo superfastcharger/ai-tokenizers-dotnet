@@ -53,4 +53,4 @@ namespace LLMSharp.Tokenizers.Shared
         /// <param name="disallowedSpecial">special tokens that should be disallowed for tokenization. If null, any special token that is not allowed will be considered disallowed.</param>
         /// <returns>list of byte pair encoded tokens for the text</returns>
         /// <exception cref="InvalidOperationException">thrown when any of the disallowed special tokens are found in the text</exception>
-        IReadOnlyList<int> EncodeWithSpecialTokens(string text, 
+        IReadOnlyList<int> EncodeWithSpecialTokens(string text, IEnumerable<string> allowedSpecialTokens, IEnumerable<string> disallowedSpecialT
