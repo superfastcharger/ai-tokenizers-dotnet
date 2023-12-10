@@ -56,4 +56,5 @@ namespace LLMSharp.Tokenizers.Shared
         IReadOnlyList<int> EncodeWithSpecialTokens(string text, IEnumerable<string> allowedSpecialTokens, IEnumerable<string> disallowedSpecialTokens);
 
         /// <summary>
-        /// Counts number
+        /// Counts number of byte pair encoded tokens for the given text input
+        
