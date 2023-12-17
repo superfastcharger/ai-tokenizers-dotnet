@@ -63,4 +63,5 @@ namespace LLMSharp.Tokenizers.Shared
         /// Hence, by default, CountTokensWithSpecialTokens will raise an error if it encounters text that corresponds
         /// to a special token.This can be controlled on a per-token level using the `allowed_special`
         /// and `disallowed_special` parameters.In particular:
-        /// Setting 'disallowedSpecial' to null will prevent this function from raising err
+        /// Setting 'disallowedSpecial' to null will prevent this function from raising errors and
+        /// cause all text corresponding to special tokens
