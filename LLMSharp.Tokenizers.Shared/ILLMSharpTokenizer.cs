@@ -68,4 +68,5 @@ namespace LLMSharp.Tokenizers.Shared
         /// Setting 'allowedSpecial' to null will cause this function to treat all text
         /// corresponding to special tokens to be encoded as special tokens.
         /// </summary>
-        /// <param name="text">text input for counting
+        /// <param name="text">text input for counting number of tokens</param>
+        /// <param name="allowedSpec
