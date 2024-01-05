@@ -77,4 +77,6 @@ namespace LLMSharp.Tokenizers.Shared
 
         /// <summary>
         /// Decodes a list of tokens into a string
-        //
+        /// Useful for visualizing tokenization
+        /// </summary>
+        
