@@ -80,4 +80,6 @@ namespace LLMSharp.Tokenizers.Shared
         /// Useful for visualizing tokenization
         /// </summary>
         /// <param name="tokens"></param>
-        /// <returns>decod
+        /// <returns>decoded string using the tokens</returns>
+        string Decode(IEnumerable<int> tokens);
+   
