@@ -76,4 +76,5 @@ namespace LLMSharp.Tokenizers.Shared
         int CountWithSpecialTokens(string text, IEnumerable<string> allowedSpecialTokens, IEnumerable<string> disallowedSpecialTokens);
 
         /// <summary>
- 
+        /// Decodes a list of tokens into a string
+        //
