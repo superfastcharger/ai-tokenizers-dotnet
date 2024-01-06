@@ -82,4 +82,5 @@ namespace LLMSharp.Tokenizers.Shared
         /// <param name="tokens"></param>
         /// <returns>decoded string using the tokens</returns>
         string Decode(IEnumerable<int> tokens);
-   
+    }
+}
