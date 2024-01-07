@@ -7,4 +7,5 @@
     <DelaySign>True</DelaySign>
   </PropertyGroup>
 
-  <ItemGr
+  <ItemGroup>
+    <Compile Include="..\LLMSharp.TokenizerMap.Builder\Toke
