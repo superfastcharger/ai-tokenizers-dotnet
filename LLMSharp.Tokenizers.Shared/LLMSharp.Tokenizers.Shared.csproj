@@ -3,4 +3,8 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <SignAssembly>True</SignAssembly>
-    <AssemblyOriginatorKeyFile>..\llmsharp-tokenizers.snk</AssemblyOr
+    <AssemblyOriginatorKeyFile>..\llmsharp-tokenizers.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>True</DelaySign>
+  </PropertyGroup>
+
+  <ItemGr
