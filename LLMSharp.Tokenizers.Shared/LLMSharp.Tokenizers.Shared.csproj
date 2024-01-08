@@ -8,4 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="..\LLMSharp.TokenizerMap.Builder\Toke
+    <Compile Include="..\LLMSharp.TokenizerMap.Builder\TokenizerMaps.cs" Link="TokenizerMaps.cs" />
+  </ItemGroup>
+
+  <ItemGr
