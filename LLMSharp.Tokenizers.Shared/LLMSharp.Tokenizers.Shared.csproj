@@ -11,4 +11,6 @@
     <Compile Include="..\LLMSharp.TokenizerMap.Builder\TokenizerMaps.cs" Link="TokenizerMaps.cs" />
   </ItemGroup>
 
-  <ItemGr
+  <ItemGroup>
+    <PackageReference Include="Google.Protobuf" Version="3.24.0" />
+    <PackageRe
