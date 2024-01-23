@@ -73,3 +73,61 @@ namespace LLMSharp.Tokenizers.Shared
                     throw new InvalidOperationException($"The text contains a special token that is not allowed: {disallowedSpecialMatch.Value}");
                 }
             }
+
+            // assuming each token is approximately 4 bytes, let's declare an initial capacity
+            List<int> result = new List<int>(text.Length / 4);
+            int start = 0;
+
+            /**
+             * We will perform the following in a loop till the end of string
+             * 1. Identify the slice of string between two special tokens
+             * 2. Run that slice through the pattern matching string regex to obtain matches
+             * 3. Pass those matches and their corresponding ranks from tokenMap to BPE algorithm
+             * 4. Get the corresponding compressed representation as tokens, append to our result
+             */
+            while (true)
+            {
+                int startFind = start;
+                Match nextSpecial = null;
+
+                // 1. Identify the index of next special token to slice
+                while (true)
+                {
+                    nextSpecial = specialTokenRegex.Match(text, startFind);
+
+                    // we didn't find any special token or the special token we found is allowed. Then break
+                    if (!nextSpecial.Success || allowedSpecialSet.Contains(nextSpecial.Value)) break;
+                    startFind = nextSpecial.Index + 1;
+                }
+
+                int end = (nextSpecial?.Success == true) ? nextSpecial.Index : text.Length;                
+
+                // 2. Run the slice of the string through pattern matching
+                foreach (Match match in patternStringRegex.Matches(text.Substring(start, end - start)))
+                {
+                    var matchBytes = ByteString.CopyFromUtf8(match.Value);
+
+                    // if there is rank available for this slice, add it to result. If not perform BPE
+                    if (tokenMaps.RankMap.TryGetValue(matchBytes.ToBase64(), out int rank))
+                    {
+                        result.Add(rank);
+                        continue;
+                    }
+
+                    result.AddRange(BytePairEncode(matchBytes));
+                }
+
+                if (nextSpecial?.Success != true) break;
+                result.Add(tokenMaps.SpecialTokens[nextSpecial.Value]);
+                start = nextSpecial.Index + nextSpecial.Length;
+            }
+
+            return result;
+        }
+
+        /// <summary>
+        /// Counts number of byte pair encoded tokens for the given text input
+        /// Special tokens are artificial tokens used to unlock capabilities from a model,
+        /// such as fill-in-the-middle.So we want to be careful about accidentally encoding special
+        /// tokens, since they can be used to trick a model into doing something we don't want it to do.
+        /// Hence, by default, encode will raise an error if it encounters text that corresponds
