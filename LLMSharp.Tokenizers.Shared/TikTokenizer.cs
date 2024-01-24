@@ -258,3 +258,73 @@ namespace LLMSharp.Tokenizers.Shared
             var bpm = BytePairMerge(piece);            
             foreach (var (start, end) in bpm)
             {
+                var slice = Convert.ToBase64String(piece.Span.Slice(start, end - start).ToArray());                
+                if (tokenMaps.RankMap.TryGetValue(slice, out int rank))
+                {
+                    ranks.Add(rank);
+                }
+            }
+
+            return ranks;
+        } 
+
+        /// <summary>
+        /// Counts number of byte pair encoded tokens in a given bytestring
+        /// </summary>
+        /// <param name="piece">bytestring used for counting tokens</param>
+        /// <returns>count of tokens</returns>
+        private int CountBytePairEncodeTokens(ByteString piece)
+        {            
+            if (piece.Length == 1)
+            {
+                if (tokenMaps.RankMap.ContainsKey(piece.ToBase64()))
+                {
+                    return 1;
+                }
+                
+                return 0;
+            }
+
+            return BytePairMerge(piece).Count;            
+        }       
+
+        /// <summary>
+        /// Perform a byte pair merge of the given byte array using the rank map
+        /// </summary>
+        /// <param name="piece"></param>
+        /// <returns>A readonly list of (start, end) index slices after merging in the ranked order</returns>
+        private IReadOnlyList<(int start, int end)> BytePairMerge(ByteString piece)
+        {
+            var parts = Enumerable.Range(0, piece.Length)
+                .Select(i => (start: i, end: i + 1))
+                .ToList();
+
+            while (parts.Count > 0)
+            {
+                var minRank = (rank: int.MaxValue, index: -1);
+                for (int i = 0; i < parts.Count - 1; i++)
+                {
+                    var slice = piece.Span.Slice(parts[i].start, parts[i + 1].end - parts[i].start).ToArray();
+                    if (!tokenMaps.RankMap.TryGetValue(Convert.ToBase64String(slice), out int rank))
+                    {
+                        continue;
+                    }
+
+                    if (rank < minRank.rank)
+                    {
+                        minRank.rank = rank;
+                        minRank.index = i;
+                    }
+                }
+
+                if (minRank.index > -1)
+                {
+                    int idx = minRank.index;
+                    parts[idx] = (parts[idx].start, parts[idx + 1].end);
+                    parts.RemoveAt(idx + 1);
+                }
+                else
+                {
+                    break;
+                }
+            }
