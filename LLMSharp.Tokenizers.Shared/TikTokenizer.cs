@@ -328,3 +328,8 @@ namespace LLMSharp.Tokenizers.Shared
                     break;
                 }
             }
+
+            return parts;
+        }        
+    }
+}
