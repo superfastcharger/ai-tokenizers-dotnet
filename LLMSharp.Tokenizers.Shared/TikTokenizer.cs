@@ -186,3 +186,75 @@ namespace LLMSharp.Tokenizers.Shared
                     nextSpecial = specialTokenRegex.Match(text, startFind);
                     if (!nextSpecial.Success || allowedSpecialSet.Contains(nextSpecial.Value)) break;
                     startFind = nextSpecial.Index + 1;
+                }
+
+                int end = (nextSpecial?.Success == true) ? nextSpecial.Index : text.Length;
+
+                foreach (Match match in patternStringRegex.Matches(text.Substring(start, end - start)))
+                {
+                    var matchBytes = ByteString.CopyFromUtf8(match.Value);
+                    if (tokenMaps.RankMap.ContainsKey(matchBytes.ToBase64()))
+                    {
+                        tokenCount++;
+                    }
+                    else
+                    {
+                        tokenCount += CountBytePairEncodeTokens(matchBytes);  // A method similar to BytePairEncode, but just counts tokens
+                    }
+                }
+
+                if (nextSpecial?.Success != true) break;
+                tokenCount++;
+                start = nextSpecial.Index + nextSpecial.Length;
+            }
+
+            return tokenCount;
+        }
+
+        /// <summary>
+        /// Decodes a list of tokens into a string
+        /// Useful for visualizing tokenization
+        /// </summary>
+        /// <param name="tokens"></param>
+        /// <returns>decoded string using the tokens</returns>
+        public string Decode(IEnumerable<int> tokens)
+        {
+            List<byte> result = new List<byte>();
+
+            foreach (int token in tokens)
+            {
+                if (tokenMaps.TextMap.TryGetValue(token, out ByteString value))
+                {
+                    result.AddRange(value);
+                }
+                else if (tokenMaps.InverseSpecialTokens.TryGetValue(token, out ByteString inverse))
+                {
+                    result.AddRange(inverse);
+                }
+            }
+
+            return Encoding.UTF8.GetString(result.ToArray());
+        }
+
+        /// <summary>
+        /// Perform Byte Pair encoding of the byte array
+        /// </summary>
+        /// <param name="piece">byte array slice for performing BPE</param>
+        /// <returns>readonly list of tokens after performing BPE</returns>
+        private IReadOnlyList<int> BytePairEncode(ByteString piece)
+        {
+            List<int> ranks = new List<int>();
+
+            if (piece.Length == 1)
+            {
+                if(tokenMaps.RankMap.TryGetValue(piece.ToBase64(), out int rank))
+                {
+                    ranks.Add(rank);
+                }
+
+                return ranks;
+            }
+
+            var bpm = BytePairMerge(piece);            
+            foreach (var (start, end) in bpm)
+            {
