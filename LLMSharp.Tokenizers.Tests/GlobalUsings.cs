@@ -1,1 +1,1 @@
-global using Microsoft.VisualSt
+global using Microsoft.VisualStudio.TestTools.UnitTesting;
