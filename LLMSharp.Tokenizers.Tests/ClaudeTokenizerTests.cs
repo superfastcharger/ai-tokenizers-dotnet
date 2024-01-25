@@ -53,3 +53,43 @@ namespace LLMSharp.Tokenizers.Tests
             var decodedText = claudeTokenizer.Decode(encodedBytes);
             Assert.AreEqual(decodedText, TestData.AnthropicClaudeSpecialCharacters);
         }
+
+        [TestMethod]
+        public void ShouldCountSpecialTokens_WhenUsing_CountWithSpecialTokens()
+        {
+            var encodedBytes = claudeTokenizer.EncodeWithSpecialTokens(TestData.AnthropicClaudeSpecialCharacters, null, null);
+            var tokenCount = claudeTokenizer.CountWithSpecialTokens(TestData.AnthropicClaudeSpecialCharacters, null, null);
+            Assert.AreEqual(encodedBytes.Count, tokenCount);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(InvalidOperationException))]
+        public void ShouldThrowException_WhenSpecialToken_IsNotIncluded_WhenUsing_EncodeWithSpecialTokens()
+        {
+            claudeTokenizer.EncodeWithSpecialTokens(TestData.AnthropicClaudeSpecialCharacters, new string[] { "<META_START>" }, null);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(InvalidOperationException))]
+        public void ShouldThrowException_WhenSpecialToken_IsNotIncluded_WhenUsing_CountWithSpecialTokens()
+        {
+            claudeTokenizer.CountWithSpecialTokens(TestData.AnthropicClaudeSpecialCharacters, new string[] { "<META_START>" }, null);
+        }
+
+        [TestMethod]
+        public void ShouldEncode_WhenSpecialTokens_AreIncluded_WhenUsing_EncodeWithSpecialTokens()
+        {
+            var encodedBytes = claudeTokenizer.EncodeWithSpecialTokens(TestData.AnthropicClaudeSpecialCharacters, new string[] { "<META_START>", "<META_END>" }, null);
+            var decodedText = claudeTokenizer.Decode(encodedBytes);
+            Assert.AreEqual(decodedText, TestData.AnthropicClaudeSpecialCharacters);
+        }
+
+        [TestMethod]
+        public void ShouldEncode_WhenSpecialTokens_AreIncluded_WhenUsing_CountWithSpecialTokens()
+        {
+            var encodedBytes = claudeTokenizer.EncodeWithSpecialTokens(TestData.AnthropicClaudeSpecialCharacters, new string[] { "<META_START>", "<META_END>" }, null);
+            var tokenCount = claudeTokenizer.CountWithSpecialTokens(TestData.AnthropicClaudeSpecialCharacters, new string[] { "<META_START>", "<META_END>" }, null);
+            Assert.AreEqual(tokenCount, encodedBytes.Count);
+        }
+    }
+}
