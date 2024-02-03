@@ -5,4 +5,5 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 
-    <IsPack
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
