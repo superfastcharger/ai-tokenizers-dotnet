@@ -17,4 +17,5 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\LLMSharp.Anthr
+    <ProjectReference Include="..\LLMSharp.Anthropic.Tokenizer\LLMSharp.Anthropic.Tokenizer.csproj" />
+    <Proje
