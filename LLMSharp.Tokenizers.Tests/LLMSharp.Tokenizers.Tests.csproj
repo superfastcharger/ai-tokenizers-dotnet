@@ -18,4 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\LLMSharp.Anthropic.Tokenizer\LLMSharp.Anthropic.Tokenizer.csproj" />
-    <ProjectReference Include="..\LLMSharp.OpenAi.Tokenizer\LLMSharp.Ope
+    <ProjectReference Include="..\LLMSharp.OpenAi.Tokenizer\LLMSharp.OpenAi.Tokenizer.csproj" />
+  </ItemGroup>
+
+</Project>
