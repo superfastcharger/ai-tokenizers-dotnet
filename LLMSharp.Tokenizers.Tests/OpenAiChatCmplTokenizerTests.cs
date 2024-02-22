@@ -87,3 +87,9 @@ namespace LLMSharp.Tokenizers.Tests
         [TestMethod]
         public void ShouldEncode_WhenSpecialTokens_AreIncluded_WhenUsing_CountWithSpecialTokens()
         {
+            var encodedBytes = chatCompletionsTokenizer.EncodeWithSpecialTokens(TestData.GptChatCompletionSpecialCharacters, new string[] { "<|endoftext|>", "<|fim_suffix|>" }, null);
+            var tokenCount = chatCompletionsTokenizer.CountWithSpecialTokens(TestData.GptChatCompletionSpecialCharacters, new string[] { "<|endoftext|>", "<|fim_suffix|>" }, null);
+            Assert.AreEqual(encodedBytes.Count, tokenCount);
+        }
+    }
+}
