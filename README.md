@@ -7,4 +7,9 @@
 
 ## Usage
 
-- Install the latest version of nuget packa
+- Install the latest version of nuget package
+
+```
+dotnet add package Tokenizer.Anthropic
+
+dotnet add package Tokenizer.Open
