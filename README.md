@@ -12,4 +12,10 @@
 ```
 dotnet add package Tokenizer.Anthropic
 
-dotnet add package Tokenizer.Open
+dotnet add package Tokenizer.OpenAi
+```
+
+- Create an instance of the tokenizer
+
+```csharp
+// Clau
