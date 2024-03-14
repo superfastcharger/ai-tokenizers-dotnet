@@ -21,4 +21,8 @@ dotnet add package Tokenizer.OpenAi
 // Claude Tokenizer
 using Tokenizer.Anthropic;
 
-var tokenizer = new ClaudeTokeni
+var tokenizer = new ClaudeTokenizer();
+
+
+// OpenAi ChatCompletion Models Tokenizer
+using Tokenizer
