@@ -18,4 +18,7 @@ dotnet add package Tokenizer.OpenAi
 - Create an instance of the tokenizer
 
 ```csharp
-// Clau
+// Claude Tokenizer
+using Tokenizer.Anthropic;
+
+var tokenizer = new ClaudeTokeni
