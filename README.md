@@ -30,4 +30,4 @@ using Tokenizer.OpenAi;
 var tokenizer = new OpenAiChatCompletionsTokenizer();
 ```
 
-- **Encode** : tokenize
+- **Encode** : tokenizes a given text, this is the default implementation that throws an excepti
