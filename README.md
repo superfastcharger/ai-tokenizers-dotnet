@@ -30,4 +30,7 @@ using Tokenizer.OpenAi;
 var tokenizer = new OpenAiChatCompletionsTokenizer();
 ```
 
-- **Encode** : tokenizes a given text, this is the default implementation that throws an excepti
+- **Encode** : tokenizes a given text, this is the default implementation that throws an exception if the text contains any special tokens
+
+```csharp
+var encodedToke
