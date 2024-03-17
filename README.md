@@ -33,4 +33,7 @@ var tokenizer = new OpenAiChatCompletionsTokenizer();
 - **Encode** : tokenizes a given text, this is the default implementation that throws an exception if the text contains any special tokens
 
 ```csharp
-var encodedToke
+var encodedTokens = tokenizer.Encode("hello world");
+```
+
+- **CountTokens** : count tok
