@@ -25,4 +25,9 @@ var tokenizer = new ClaudeTokenizer();
 
 
 // OpenAi ChatCompletion Models Tokenizer
-using Tokenizer
+using Tokenizer.OpenAi;
+
+var tokenizer = new OpenAiChatCompletionsTokenizer();
+```
+
+- **Encode** : tokenize
