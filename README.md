@@ -36,4 +36,4 @@ var tokenizer = new OpenAiChatCompletionsTokenizer();
 var encodedTokens = tokenizer.Encode("hello world");
 ```
 
-- **CountTokens** : count tok
+- **CountTokens** : count tokens in a given text, this is the default implementation that throws an e
