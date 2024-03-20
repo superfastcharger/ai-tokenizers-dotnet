@@ -42,4 +42,7 @@ var encodedTokens = tokenizer.Encode("hello world");
 var tokenCount = tokenizer.CountTokens("hello world");
 ```
 
-- **EncodeWithSpecialTokens** : tokenizes a given text, inc
+- **EncodeWithSpecialTokens** : tokenizes a given text, including all or specific special tokens
+
+```csharp
+// passing 'null' for allowedSp
