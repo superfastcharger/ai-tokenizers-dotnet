@@ -46,4 +46,6 @@ var tokenCount = tokenizer.CountTokens("hello world");
 
 ```csharp
 // passing 'null' for allowedSpecial , will help tokenize all special tokens
-var encodedBytes = tokenizer.E
+var encodedBytes = tokenizer.EncodeWithSpecialTokens(
+    text:"<META_START>some data<META_END>",
+    allowedSp
