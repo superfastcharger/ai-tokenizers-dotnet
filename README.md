@@ -45,4 +45,5 @@ var tokenCount = tokenizer.CountTokens("hello world");
 - **EncodeWithSpecialTokens** : tokenizes a given text, including all or specific special tokens
 
 ```csharp
-// passing 'null' for allowedSp
+// passing 'null' for allowedSpecial , will help tokenize all special tokens
+var encodedBytes = tokenizer.E
