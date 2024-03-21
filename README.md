@@ -52,4 +52,5 @@ var encodedBytes = tokenizer.EncodeWithSpecialTokens(
     disallowedSpecial: null);
 
 
-// passing an array of strings for allowedSpecial , will help tokenize only those special to
+// passing an array of strings for allowedSpecial , will help tokenize only those special tokens
+// any other special tokens found in the text will throw an except
