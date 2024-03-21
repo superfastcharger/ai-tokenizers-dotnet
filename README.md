@@ -48,4 +48,8 @@ var tokenCount = tokenizer.CountTokens("hello world");
 // passing 'null' for allowedSpecial , will help tokenize all special tokens
 var encodedBytes = tokenizer.EncodeWithSpecialTokens(
     text:"<META_START>some data<META_END>",
-    allowedSp
+    allowedSpecial: null,
+    disallowedSpecial: null);
+
+
+// passing an array of strin
