@@ -56,4 +56,8 @@ var encodedBytes = tokenizer.EncodeWithSpecialTokens(
 // any other special tokens found in the text will throw an exception
 var encodedBytes = tokenizer.EncodeWithSpecialTokens(
     text:"<META_START>some data<META_END>",
-    allowedSpecial: new strin
+    allowedSpecial: new string[]{"<META_START>", "<META_END>"},
+    disallowedSpecial: null);
+```
+
+-
