@@ -60,4 +60,4 @@ var encodedBytes = tokenizer.EncodeWithSpecialTokens(
     disallowedSpecial: null);
 ```
 
--
+- **CountWithSpecialTokens** : count tokens in a given text, includin
