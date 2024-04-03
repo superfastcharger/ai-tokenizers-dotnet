@@ -60,4 +60,7 @@ var encodedBytes = tokenizer.EncodeWithSpecialTokens(
     disallowedSpecial: null);
 ```
 
-- **CountWithSpecialTokens** : count tokens in a given text, includin
+- **CountWithSpecialTokens** : count tokens in a given text, including all or specific special tokens
+
+```csharp
+var tokenCount = tokenizer.CountWith
