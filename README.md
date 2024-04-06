@@ -63,4 +63,6 @@ var encodedBytes = tokenizer.EncodeWithSpecialTokens(
 - **CountWithSpecialTokens** : count tokens in a given text, including all or specific special tokens
 
 ```csharp
-var tokenCount = tokenizer.CountWith
+var tokenCount = tokenizer.CountWithSpecialTokens(
+    text:"<META_START>some data<META_END>",
+    allowed
