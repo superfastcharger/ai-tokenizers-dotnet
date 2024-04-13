@@ -66,4 +66,9 @@ var encodedBytes = tokenizer.EncodeWithSpecialTokens(
 var tokenCount = tokenizer.CountWithSpecialTokens(
     text:"<META_START>some data<META_END>",
     allowedSpecial: new string[]{"<META_START>", "<META_END>"},
-    disallowedS
+    disallowedSpecial: null);
+```
+
+## Benchmarks
+
+Encoding and CountTokens for 4
