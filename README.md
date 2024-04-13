@@ -73,4 +73,4 @@ var tokenCount = tokenizer.CountWithSpecialTokens(
 
 Encoding and CountTokens for 4200 tokens (~16 KB) of text
 
-Detailed benchmark results are p
+Detailed benchmark results are provided in the following tables for Linux, macOS, and Windows platforms. 
